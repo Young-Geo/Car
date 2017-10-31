@@ -3,6 +3,6 @@ prefix=/home/pi/Car/devel
 Name: node_ultrasonic
 Description: Description of node_ultrasonic
 Version: 0.0.0
-Cflags: 
-Libs: -L/home/pi/Car/devel/lib 
-Requires: 
+Cflags: -I/home/pi/Car/devel/include -I/home/pi/Car/src/node_ultrasonic/include
+Libs: -L/home/pi/Car/devel/lib -lnode_ultrasonic
+Requires: roscpp std_msgs message_runtime
