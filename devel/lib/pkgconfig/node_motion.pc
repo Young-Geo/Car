@@ -3,6 +3,6 @@ prefix=/home/pi/Car/devel
 Name: node_motion
 Description: Description of node_motion
 Version: 0.0.0
-Cflags: 
-Libs: -L/home/pi/Car/devel/lib 
-Requires: 
+Cflags: -I/home/pi/Car/devel/include -I/home/pi/Car/src/node_motion/include
+Libs: -L/home/pi/Car/devel/lib -lnode_motion
+Requires: roscpp std_msgs message_runtime

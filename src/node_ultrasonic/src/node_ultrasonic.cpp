@@ -32,11 +32,11 @@ float disMeasure(void)
     digitalWrite(Trig, LOW);
     delayMicroseconds(2);
 
-    ROS_INFO("%s\n", "开始发送超声波");
+    ROS_INFO("%s\n", "start send Ultrasonic");
     digitalWrite(Trig, HIGH);
     delayMicroseconds(10);
     digitalWrite(Trig, LOW);
-    ROS_INFO("%s\n", "超声波发送完毕");
+    ROS_INFO("%s\n", "stop send Ultrasonic");
 
 
     while(!(digitalRead(Echo) == 1));
@@ -48,8 +48,8 @@ float disMeasure(void)
 
     start = tv1.tv_sec * 1000000 + tv1.tv_usec;
     stop  = tv2.tv_sec * 1000000 + tv2.tv_usec;
-    ROS_INFO("start ld%\n", start);
-    ROS_INFO("start ld%\n", stop);
+    ROS_INFO("start %ld\n", start);
+    ROS_INFO("start %ld\n", stop);
 
     dis = (float)(stop - start) / 1000000 * 34000 / 2;
 

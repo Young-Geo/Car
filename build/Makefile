@@ -374,6 +374,110 @@ std_msgs_generate_messages_py/fast:
 .PHONY : std_msgs_generate_messages_py/fast
 
 #=============================================================================
+# Target rules for targets named node_motion_generate_messages
+
+# Build rule for target.
+node_motion_generate_messages: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 node_motion_generate_messages
+.PHONY : node_motion_generate_messages
+
+# fast build rule for target.
+node_motion_generate_messages/fast:
+	$(MAKE) -f node_motion/CMakeFiles/node_motion_generate_messages.dir/build.make node_motion/CMakeFiles/node_motion_generate_messages.dir/build
+.PHONY : node_motion_generate_messages/fast
+
+#=============================================================================
+# Target rules for targets named _node_motion_generate_messages_check_deps_motion
+
+# Build rule for target.
+_node_motion_generate_messages_check_deps_motion: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _node_motion_generate_messages_check_deps_motion
+.PHONY : _node_motion_generate_messages_check_deps_motion
+
+# fast build rule for target.
+_node_motion_generate_messages_check_deps_motion/fast:
+	$(MAKE) -f node_motion/CMakeFiles/_node_motion_generate_messages_check_deps_motion.dir/build.make node_motion/CMakeFiles/_node_motion_generate_messages_check_deps_motion.dir/build
+.PHONY : _node_motion_generate_messages_check_deps_motion/fast
+
+#=============================================================================
+# Target rules for targets named node_motion_generate_messages_cpp
+
+# Build rule for target.
+node_motion_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 node_motion_generate_messages_cpp
+.PHONY : node_motion_generate_messages_cpp
+
+# fast build rule for target.
+node_motion_generate_messages_cpp/fast:
+	$(MAKE) -f node_motion/CMakeFiles/node_motion_generate_messages_cpp.dir/build.make node_motion/CMakeFiles/node_motion_generate_messages_cpp.dir/build
+.PHONY : node_motion_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named node_motion_gencpp
+
+# Build rule for target.
+node_motion_gencpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 node_motion_gencpp
+.PHONY : node_motion_gencpp
+
+# fast build rule for target.
+node_motion_gencpp/fast:
+	$(MAKE) -f node_motion/CMakeFiles/node_motion_gencpp.dir/build.make node_motion/CMakeFiles/node_motion_gencpp.dir/build
+.PHONY : node_motion_gencpp/fast
+
+#=============================================================================
+# Target rules for targets named node_motion_generate_messages_lisp
+
+# Build rule for target.
+node_motion_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 node_motion_generate_messages_lisp
+.PHONY : node_motion_generate_messages_lisp
+
+# fast build rule for target.
+node_motion_generate_messages_lisp/fast:
+	$(MAKE) -f node_motion/CMakeFiles/node_motion_generate_messages_lisp.dir/build.make node_motion/CMakeFiles/node_motion_generate_messages_lisp.dir/build
+.PHONY : node_motion_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named node_motion_genlisp
+
+# Build rule for target.
+node_motion_genlisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 node_motion_genlisp
+.PHONY : node_motion_genlisp
+
+# fast build rule for target.
+node_motion_genlisp/fast:
+	$(MAKE) -f node_motion/CMakeFiles/node_motion_genlisp.dir/build.make node_motion/CMakeFiles/node_motion_genlisp.dir/build
+.PHONY : node_motion_genlisp/fast
+
+#=============================================================================
+# Target rules for targets named node_motion_generate_messages_py
+
+# Build rule for target.
+node_motion_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 node_motion_generate_messages_py
+.PHONY : node_motion_generate_messages_py
+
+# fast build rule for target.
+node_motion_generate_messages_py/fast:
+	$(MAKE) -f node_motion/CMakeFiles/node_motion_generate_messages_py.dir/build.make node_motion/CMakeFiles/node_motion_generate_messages_py.dir/build
+.PHONY : node_motion_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named node_motion_genpy
+
+# Build rule for target.
+node_motion_genpy: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 node_motion_genpy
+.PHONY : node_motion_genpy
+
+# fast build rule for target.
+node_motion_genpy/fast:
+	$(MAKE) -f node_motion/CMakeFiles/node_motion_genpy.dir/build.make node_motion/CMakeFiles/node_motion_genpy.dir/build
+.PHONY : node_motion_genpy/fast
+
+#=============================================================================
 # Target rules for targets named node_ultrasonic_generate_messages_cpp
 
 # Build rule for target.
@@ -519,6 +623,14 @@ help:
 	@echo "... std_msgs_generate_messages_cpp"
 	@echo "... std_msgs_generate_messages_lisp"
 	@echo "... std_msgs_generate_messages_py"
+	@echo "... node_motion_generate_messages"
+	@echo "... _node_motion_generate_messages_check_deps_motion"
+	@echo "... node_motion_generate_messages_cpp"
+	@echo "... node_motion_gencpp"
+	@echo "... node_motion_generate_messages_lisp"
+	@echo "... node_motion_genlisp"
+	@echo "... node_motion_generate_messages_py"
+	@echo "... node_motion_genpy"
 	@echo "... node_ultrasonic_generate_messages_cpp"
 	@echo "... _node_ultrasonic_generate_messages_check_deps_ultr"
 	@echo "... node_ultrasonic_gencpp"

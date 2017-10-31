@@ -45,8 +45,6 @@ ros/ros.h
 /home/pi/Car/src/node_ultrasonic/src/ros/ros.h
 node_ultrasonic/ultr.h
 /home/pi/Car/src/node_ultrasonic/src/node_ultrasonic/ultr.h
-sstream
--
 
 /opt/ros/indigo/include/XmlRpcDecl.h
 ros/macros.h
