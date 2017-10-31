@@ -1,0 +1,8 @@
+prefix=/home/pi/Car/devel
+
+Name: node_client
+Description: Description of node_client
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/pi/Car/devel/lib 
+Requires: 

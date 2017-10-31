@@ -1,0 +1,8 @@
+prefix=/home/pi/Car/devel
+
+Name: node_ultrasonic
+Description: Description of node_ultrasonic
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/pi/Car/devel/lib 
+Requires: 

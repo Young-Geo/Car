@@ -1,0 +1,8 @@
+prefix=/home/pi/Car/devel
+
+Name: node_camera
+Description: Description of node_camera
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/pi/Car/devel/lib 
+Requires: 
