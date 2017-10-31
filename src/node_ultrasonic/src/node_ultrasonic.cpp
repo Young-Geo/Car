@@ -56,9 +56,9 @@ float disMeasure(void)
 
 int main(int argc, const char **argv)
 {
-    ros::init(argc, argv, "node_ultrasonic");
+    ros::init(argc, (char**)argv, "node_ultrasonic");
     ros::NodeHandle n;
-    ros::Publisher pub = n.advertise<node_ultrasonic::ultr>("ultrdis");
+    ros::Publisher pub = n.advertise<node_ultrasonic::ultr>("ultrdis", 1000);
     ros::Rate r(10);
 
     node_ultrasonic::ultr ultrdis;
@@ -69,7 +69,7 @@ int main(int argc, const char **argv)
     {
         ultrdis.distance = disMeasure();//Computing distance
 
-        pub.pulish(ultrdis);
+        pub.publish(ultrdis);
 
         ros::spinOnce();//spin one 
 

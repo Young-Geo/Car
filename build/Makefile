@@ -477,6 +477,19 @@ node_ultrasonic_generate_messages_lisp/fast:
 	$(MAKE) -f node_ultrasonic/CMakeFiles/node_ultrasonic_generate_messages_lisp.dir/build.make node_ultrasonic/CMakeFiles/node_ultrasonic_generate_messages_lisp.dir/build
 .PHONY : node_ultrasonic_generate_messages_lisp/fast
 
+#=============================================================================
+# Target rules for targets named node_ultrasonic
+
+# Build rule for target.
+node_ultrasonic: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 node_ultrasonic
+.PHONY : node_ultrasonic
+
+# fast build rule for target.
+node_ultrasonic/fast:
+	$(MAKE) -f node_ultrasonic/CMakeFiles/node_ultrasonic.dir/build.make node_ultrasonic/CMakeFiles/node_ultrasonic.dir/build
+.PHONY : node_ultrasonic/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -514,6 +527,7 @@ help:
 	@echo "... node_ultrasonic_generate_messages_py"
 	@echo "... node_ultrasonic_genpy"
 	@echo "... node_ultrasonic_generate_messages_lisp"
+	@echo "... node_ultrasonic"
 .PHONY : help
 
 
