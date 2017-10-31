@@ -10,7 +10,6 @@
 
 #include "ros/ros.h"
 #include "node_ultrasonic/ultr.h"
-#include <sstream>
 
 #define Trig    28
 #define Echo    29
@@ -33,9 +32,11 @@ float disMeasure(void)
     digitalWrite(Trig, LOW);
     delayMicroseconds(2);
 
+    ROS_INFO("%s\n", "开始发送超声波");
     digitalWrite(Trig, HIGH);
     delayMicroseconds(10);
     digitalWrite(Trig, LOW);
+    ROS_INFO("%s\n", "超声波发送完毕");
 
 
     while(!(digitalRead(Echo) == 1));
@@ -47,8 +48,12 @@ float disMeasure(void)
 
     start = tv1.tv_sec * 1000000 + tv1.tv_usec;
     stop  = tv2.tv_sec * 1000000 + tv2.tv_usec;
+    ROS_INFO("start ld%\n", start);
+    ROS_INFO("start ld%\n", stop);
 
     dis = (float)(stop - start) / 1000000 * 34000 / 2;
+
+    ROS_INFO("distance %f\n", dis);
 
     return dis;
 }
