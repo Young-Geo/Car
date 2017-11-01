@@ -77,6 +77,29 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: install/strip
+
+.PHONY : install/strip/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -109,29 +132,6 @@ install/local: preinstall
 install/local/fast: install/local
 
 .PHONY : install/local/fast
-
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: install/strip
-
-.PHONY : install/strip/fast
-
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -226,6 +226,21 @@ node_motion_gencpp/fast:
 .PHONY : node_motion_gencpp/fast
 
 # Convenience name for target.
+node_motion/CMakeFiles/node_motion.dir/rule:
+	cd /home/pi/Car/build && $(MAKE) -f CMakeFiles/Makefile2 node_motion/CMakeFiles/node_motion.dir/rule
+.PHONY : node_motion/CMakeFiles/node_motion.dir/rule
+
+# Convenience name for target.
+node_motion: node_motion/CMakeFiles/node_motion.dir/rule
+
+.PHONY : node_motion
+
+# fast build rule for target.
+node_motion/fast:
+	cd /home/pi/Car/build && $(MAKE) -f node_motion/CMakeFiles/node_motion.dir/build.make node_motion/CMakeFiles/node_motion.dir/build
+.PHONY : node_motion/fast
+
+# Convenience name for target.
 node_motion/CMakeFiles/node_motion_generate_messages_lisp.dir/rule:
 	cd /home/pi/Car/build && $(MAKE) -f CMakeFiles/Makefile2 node_motion/CMakeFiles/node_motion_generate_messages_lisp.dir/rule
 .PHONY : node_motion/CMakeFiles/node_motion_generate_messages_lisp.dir/rule
@@ -285,6 +300,33 @@ node_motion_genpy/fast:
 	cd /home/pi/Car/build && $(MAKE) -f node_motion/CMakeFiles/node_motion_genpy.dir/build.make node_motion/CMakeFiles/node_motion_genpy.dir/build
 .PHONY : node_motion_genpy/fast
 
+src/node_motion.o: src/node_motion.cpp.o
+
+.PHONY : src/node_motion.o
+
+# target to build an object file
+src/node_motion.cpp.o:
+	cd /home/pi/Car/build && $(MAKE) -f node_motion/CMakeFiles/node_motion.dir/build.make node_motion/CMakeFiles/node_motion.dir/src/node_motion.cpp.o
+.PHONY : src/node_motion.cpp.o
+
+src/node_motion.i: src/node_motion.cpp.i
+
+.PHONY : src/node_motion.i
+
+# target to preprocess a source file
+src/node_motion.cpp.i:
+	cd /home/pi/Car/build && $(MAKE) -f node_motion/CMakeFiles/node_motion.dir/build.make node_motion/CMakeFiles/node_motion.dir/src/node_motion.cpp.i
+.PHONY : src/node_motion.cpp.i
+
+src/node_motion.s: src/node_motion.cpp.s
+
+.PHONY : src/node_motion.s
+
+# target to generate assembly for a file
+src/node_motion.cpp.s:
+	cd /home/pi/Car/build && $(MAKE) -f node_motion/CMakeFiles/node_motion.dir/build.make node_motion/CMakeFiles/node_motion.dir/src/node_motion.cpp.s
+.PHONY : src/node_motion.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -293,19 +335,23 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... list_install_components"
+	@echo "... install/strip"
+	@echo "... install"
 	@echo "... node_motion_generate_messages"
 	@echo "... _node_motion_generate_messages_check_deps_motion"
 	@echo "... node_motion_generate_messages_cpp"
 	@echo "... edit_cache"
 	@echo "... node_motion_gencpp"
+	@echo "... node_motion"
 	@echo "... node_motion_generate_messages_lisp"
 	@echo "... node_motion_genlisp"
 	@echo "... node_motion_generate_messages_py"
 	@echo "... test"
 	@echo "... node_motion_genpy"
 	@echo "... install/local"
-	@echo "... install/strip"
-	@echo "... install"
+	@echo "... src/node_motion.o"
+	@echo "... src/node_motion.i"
+	@echo "... src/node_motion.s"
 .PHONY : help
 
 

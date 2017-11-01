@@ -426,6 +426,19 @@ node_motion_gencpp/fast:
 .PHONY : node_motion_gencpp/fast
 
 #=============================================================================
+# Target rules for targets named node_motion
+
+# Build rule for target.
+node_motion: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 node_motion
+.PHONY : node_motion
+
+# fast build rule for target.
+node_motion/fast:
+	$(MAKE) -f node_motion/CMakeFiles/node_motion.dir/build.make node_motion/CMakeFiles/node_motion.dir/build
+.PHONY : node_motion/fast
+
+#=============================================================================
 # Target rules for targets named node_motion_generate_messages_lisp
 
 # Build rule for target.
@@ -627,6 +640,7 @@ help:
 	@echo "... _node_motion_generate_messages_check_deps_motion"
 	@echo "... node_motion_generate_messages_cpp"
 	@echo "... node_motion_gencpp"
+	@echo "... node_motion"
 	@echo "... node_motion_generate_messages_lisp"
 	@echo "... node_motion_genlisp"
 	@echo "... node_motion_generate_messages_py"

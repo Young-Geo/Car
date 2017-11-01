@@ -198,3 +198,6 @@ include_directories(
 
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
+add_executable(node_motion src/node_motion.cpp)
+target_link_libraries(node_motion ${catkin_LIBRARIES})
+target_link_libraries(node_motion wiringPi)
