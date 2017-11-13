@@ -1,0 +1,8 @@
+prefix=/home/pi/Car/devel
+
+Name: node_test
+Description: Description of node_test
+Version: 0.0.0
+Cflags: -I/home/pi/Car/src/node_test/include
+Libs: -L/home/pi/Car/devel/lib -lnode_test
+Requires: roscpp std_msgs

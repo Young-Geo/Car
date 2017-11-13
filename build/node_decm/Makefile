@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /home/pi/Car/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -133,6 +122,17 @@ install/local/fast: install/local
 
 .PHONY : install/local/fast
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
+
 # The main all target
 all: cmake_check_build_system
 	cd /home/pi/Car/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/pi/Car/build/CMakeFiles /home/pi/Car/build/node_decm/CMakeFiles/progress.marks
@@ -165,19 +165,125 @@ depend:
 	cd /home/pi/Car/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
+# Convenience name for target.
+node_decm/CMakeFiles/node_decm.dir/rule:
+	cd /home/pi/Car/build && $(MAKE) -f CMakeFiles/Makefile2 node_decm/CMakeFiles/node_decm.dir/rule
+.PHONY : node_decm/CMakeFiles/node_decm.dir/rule
+
+# Convenience name for target.
+node_decm: node_decm/CMakeFiles/node_decm.dir/rule
+
+.PHONY : node_decm
+
+# fast build rule for target.
+node_decm/fast:
+	cd /home/pi/Car/build && $(MAKE) -f node_decm/CMakeFiles/node_decm.dir/build.make node_decm/CMakeFiles/node_decm.dir/build
+.PHONY : node_decm/fast
+
+__/basis/afx.o: __/basis/afx.cpp.o
+
+.PHONY : __/basis/afx.o
+
+# target to build an object file
+__/basis/afx.cpp.o:
+	cd /home/pi/Car/build && $(MAKE) -f node_decm/CMakeFiles/node_decm.dir/build.make node_decm/CMakeFiles/node_decm.dir/__/basis/afx.cpp.o
+.PHONY : __/basis/afx.cpp.o
+
+__/basis/afx.i: __/basis/afx.cpp.i
+
+.PHONY : __/basis/afx.i
+
+# target to preprocess a source file
+__/basis/afx.cpp.i:
+	cd /home/pi/Car/build && $(MAKE) -f node_decm/CMakeFiles/node_decm.dir/build.make node_decm/CMakeFiles/node_decm.dir/__/basis/afx.cpp.i
+.PHONY : __/basis/afx.cpp.i
+
+__/basis/afx.s: __/basis/afx.cpp.s
+
+.PHONY : __/basis/afx.s
+
+# target to generate assembly for a file
+__/basis/afx.cpp.s:
+	cd /home/pi/Car/build && $(MAKE) -f node_decm/CMakeFiles/node_decm.dir/build.make node_decm/CMakeFiles/node_decm.dir/__/basis/afx.cpp.s
+.PHONY : __/basis/afx.cpp.s
+
+src/node_decm.o: src/node_decm.cpp.o
+
+.PHONY : src/node_decm.o
+
+# target to build an object file
+src/node_decm.cpp.o:
+	cd /home/pi/Car/build && $(MAKE) -f node_decm/CMakeFiles/node_decm.dir/build.make node_decm/CMakeFiles/node_decm.dir/src/node_decm.cpp.o
+.PHONY : src/node_decm.cpp.o
+
+src/node_decm.i: src/node_decm.cpp.i
+
+.PHONY : src/node_decm.i
+
+# target to preprocess a source file
+src/node_decm.cpp.i:
+	cd /home/pi/Car/build && $(MAKE) -f node_decm/CMakeFiles/node_decm.dir/build.make node_decm/CMakeFiles/node_decm.dir/src/node_decm.cpp.i
+.PHONY : src/node_decm.cpp.i
+
+src/node_decm.s: src/node_decm.cpp.s
+
+.PHONY : src/node_decm.s
+
+# target to generate assembly for a file
+src/node_decm.cpp.s:
+	cd /home/pi/Car/build && $(MAKE) -f node_decm/CMakeFiles/node_decm.dir/build.make node_decm/CMakeFiles/node_decm.dir/src/node_decm.cpp.s
+.PHONY : src/node_decm.cpp.s
+
+src/robot.o: src/robot.cpp.o
+
+.PHONY : src/robot.o
+
+# target to build an object file
+src/robot.cpp.o:
+	cd /home/pi/Car/build && $(MAKE) -f node_decm/CMakeFiles/node_decm.dir/build.make node_decm/CMakeFiles/node_decm.dir/src/robot.cpp.o
+.PHONY : src/robot.cpp.o
+
+src/robot.i: src/robot.cpp.i
+
+.PHONY : src/robot.i
+
+# target to preprocess a source file
+src/robot.cpp.i:
+	cd /home/pi/Car/build && $(MAKE) -f node_decm/CMakeFiles/node_decm.dir/build.make node_decm/CMakeFiles/node_decm.dir/src/robot.cpp.i
+.PHONY : src/robot.cpp.i
+
+src/robot.s: src/robot.cpp.s
+
+.PHONY : src/robot.s
+
+# target to generate assembly for a file
+src/robot.cpp.s:
+	cd /home/pi/Car/build && $(MAKE) -f node_decm/CMakeFiles/node_decm.dir/build.make node_decm/CMakeFiles/node_decm.dir/src/robot.cpp.s
+.PHONY : src/robot.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... test"
 	@echo "... edit_cache"
 	@echo "... install/strip"
 	@echo "... rebuild_cache"
 	@echo "... list_install_components"
 	@echo "... install"
 	@echo "... install/local"
+	@echo "... test"
+	@echo "... node_decm"
+	@echo "... __/basis/afx.o"
+	@echo "... __/basis/afx.i"
+	@echo "... __/basis/afx.s"
+	@echo "... src/node_decm.o"
+	@echo "... src/node_decm.i"
+	@echo "... src/node_decm.s"
+	@echo "... src/robot.o"
+	@echo "... src/robot.i"
+	@echo "... src/robot.s"
 .PHONY : help
 
 

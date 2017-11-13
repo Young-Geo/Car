@@ -1,0 +1,8 @@
+prefix=/home/pi/Car/devel
+
+Name: bondpy
+Description: Description of bondpy
+Version: 1.8.1
+Cflags: 
+Libs: -L/home/pi/Car/devel/lib 
+Requires: 

@@ -7,7 +7,12 @@
 ;//! \htmlinclude motion.msg.html
 
 (cl:defclass <motion> (roslisp-msg-protocol:ros-message)
-  ((lf_forward
+  ((type
+    :reader type
+    :initarg :type
+    :type cl:fixnum
+    :initform 0)
+   (lf_forward
     :reader lf_forward
     :initarg :lf_forward
     :type cl:integer
@@ -37,6 +42,11 @@
   (cl:unless (cl:typep m 'motion)
     (roslisp-msg-protocol:msg-deprecation-warning "using old message class name node_motion-msg:<motion> is deprecated: use node_motion-msg:motion instead.")))
 
+(cl:ensure-generic-function 'type-val :lambda-list '(m))
+(cl:defmethod type-val ((m <motion>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader node_motion-msg:type-val is deprecated.  Use node_motion-msg:type instead.")
+  (type m))
+
 (cl:ensure-generic-function 'lf_forward-val :lambda-list '(m))
 (cl:defmethod lf_forward-val ((m <motion>))
   (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader node_motion-msg:lf_forward-val is deprecated.  Use node_motion-msg:lf_forward instead.")
@@ -58,6 +68,8 @@
   (ri_back m))
 (cl:defmethod roslisp-msg-protocol:serialize ((msg <motion>) ostream)
   "Serializes a message object of type '<motion>"
+  (cl:write-byte (cl:ldb (cl:byte 8 0) (cl:slot-value msg 'type)) ostream)
+  (cl:write-byte (cl:ldb (cl:byte 8 8) (cl:slot-value msg 'type)) ostream)
   (cl:let* ((signed (cl:slot-value msg 'lf_forward)) (unsigned (cl:if (cl:< signed 0) (cl:+ signed 4294967296) signed)))
     (cl:write-byte (cl:ldb (cl:byte 8 0) unsigned) ostream)
     (cl:write-byte (cl:ldb (cl:byte 8 8) unsigned) ostream)
@@ -85,6 +97,8 @@
 )
 (cl:defmethod roslisp-msg-protocol:deserialize ((msg <motion>) istream)
   "Deserializes a message object of type '<motion>"
+    (cl:setf (cl:ldb (cl:byte 8 0) (cl:slot-value msg 'type)) (cl:read-byte istream))
+    (cl:setf (cl:ldb (cl:byte 8 8) (cl:slot-value msg 'type)) (cl:read-byte istream))
     (cl:let ((unsigned 0))
       (cl:setf (cl:ldb (cl:byte 8 0) unsigned) (cl:read-byte istream))
       (cl:setf (cl:ldb (cl:byte 8 8) unsigned) (cl:read-byte istream))
@@ -119,18 +133,19 @@
   "node_motion/motion")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<motion>)))
   "Returns md5sum for a message object of type '<motion>"
-  "30faa4135c68a2443be6182d9fd899f7")
+  "618d170492e3c869a2574b3b1e9242c4")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql 'motion)))
   "Returns md5sum for a message object of type 'motion"
-  "30faa4135c68a2443be6182d9fd899f7")
+  "618d170492e3c869a2574b3b1e9242c4")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<motion>)))
   "Returns full string definition for message of type '<motion>"
-  (cl:format cl:nil "int32 lf_forward~%int32 ri_forward~%int32 lf_back~%int32 ri_back~%~%~%"))
+  (cl:format cl:nil "uint16 type~%int32 lf_forward~%int32 ri_forward~%int32 lf_back~%int32 ri_back~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'motion)))
   "Returns full string definition for message of type 'motion"
-  (cl:format cl:nil "int32 lf_forward~%int32 ri_forward~%int32 lf_back~%int32 ri_back~%~%~%"))
+  (cl:format cl:nil "uint16 type~%int32 lf_forward~%int32 ri_forward~%int32 lf_back~%int32 ri_back~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <motion>))
   (cl:+ 0
+     2
      4
      4
      4
@@ -139,6 +154,7 @@
 (cl:defmethod roslisp-msg-protocol:ros-message-to-list ((msg <motion>))
   "Converts a ROS message object to a list"
   (cl:list 'motion
+    (cl:cons ':type (type msg))
     (cl:cons ':lf_forward (lf_forward msg))
     (cl:cons ':ri_forward (ri_forward msg))
     (cl:cons ':lf_back (lf_back msg))

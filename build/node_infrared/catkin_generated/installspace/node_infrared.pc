@@ -3,6 +3,6 @@ prefix=/home/pi/Car/install
 Name: node_infrared
 Description: Description of node_infrared
 Version: 0.0.0
-Cflags: 
-Libs: -L/home/pi/Car/install/lib 
-Requires: 
+Cflags: -I/home/pi/Car/install/include
+Libs: -L/home/pi/Car/install/lib -lnode_infrared
+Requires: roscpp std_msgs message_runtime

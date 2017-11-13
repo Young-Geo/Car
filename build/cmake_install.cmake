@@ -122,6 +122,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/pi/Car/build/node_decm/cmake_install.cmake")
   include("/home/pi/Car/build/node_infrared/cmake_install.cmake")
   include("/home/pi/Car/build/node_motion/cmake_install.cmake")
+  include("/home/pi/Car/build/node_test/cmake_install.cmake")
   include("/home/pi/Car/build/node_ultrasonic/cmake_install.cmake")
 
 endif()

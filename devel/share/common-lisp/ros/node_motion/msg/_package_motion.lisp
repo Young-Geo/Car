@@ -1,5 +1,7 @@
 (cl:in-package node_motion-msg)
-(cl:export '(LF_FORWARD-VAL
+(cl:export '(TYPE-VAL
+          TYPE
+          LF_FORWARD-VAL
           LF_FORWARD
           RI_FORWARD-VAL
           RI_FORWARD

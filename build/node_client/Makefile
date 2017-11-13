@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /home/pi/Car/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -77,17 +66,6 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
-
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: install/strip
-
-.PHONY : install/strip/fast
 
 # Special rule for the target rebuild_cache
 rebuild_cache:
@@ -110,6 +88,17 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: install/strip
+
+.PHONY : install/strip/fast
+
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
@@ -121,6 +110,17 @@ install/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
 
 # Special rule for the target install/local
 install/local: preinstall
@@ -165,19 +165,373 @@ depend:
 	cd /home/pi/Car/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
+# Convenience name for target.
+node_client/CMakeFiles/node_client_generate_messages.dir/rule:
+	cd /home/pi/Car/build && $(MAKE) -f CMakeFiles/Makefile2 node_client/CMakeFiles/node_client_generate_messages.dir/rule
+.PHONY : node_client/CMakeFiles/node_client_generate_messages.dir/rule
+
+# Convenience name for target.
+node_client_generate_messages: node_client/CMakeFiles/node_client_generate_messages.dir/rule
+
+.PHONY : node_client_generate_messages
+
+# fast build rule for target.
+node_client_generate_messages/fast:
+	cd /home/pi/Car/build && $(MAKE) -f node_client/CMakeFiles/node_client_generate_messages.dir/build.make node_client/CMakeFiles/node_client_generate_messages.dir/build
+.PHONY : node_client_generate_messages/fast
+
+# Convenience name for target.
+node_client/CMakeFiles/node_client_genlisp.dir/rule:
+	cd /home/pi/Car/build && $(MAKE) -f CMakeFiles/Makefile2 node_client/CMakeFiles/node_client_genlisp.dir/rule
+.PHONY : node_client/CMakeFiles/node_client_genlisp.dir/rule
+
+# Convenience name for target.
+node_client_genlisp: node_client/CMakeFiles/node_client_genlisp.dir/rule
+
+.PHONY : node_client_genlisp
+
+# fast build rule for target.
+node_client_genlisp/fast:
+	cd /home/pi/Car/build && $(MAKE) -f node_client/CMakeFiles/node_client_genlisp.dir/build.make node_client/CMakeFiles/node_client_genlisp.dir/build
+.PHONY : node_client_genlisp/fast
+
+# Convenience name for target.
+node_client/CMakeFiles/node_client_generate_messages_cpp.dir/rule:
+	cd /home/pi/Car/build && $(MAKE) -f CMakeFiles/Makefile2 node_client/CMakeFiles/node_client_generate_messages_cpp.dir/rule
+.PHONY : node_client/CMakeFiles/node_client_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+node_client_generate_messages_cpp: node_client/CMakeFiles/node_client_generate_messages_cpp.dir/rule
+
+.PHONY : node_client_generate_messages_cpp
+
+# fast build rule for target.
+node_client_generate_messages_cpp/fast:
+	cd /home/pi/Car/build && $(MAKE) -f node_client/CMakeFiles/node_client_generate_messages_cpp.dir/build.make node_client/CMakeFiles/node_client_generate_messages_cpp.dir/build
+.PHONY : node_client_generate_messages_cpp/fast
+
+# Convenience name for target.
+node_client/CMakeFiles/node_client_gencpp.dir/rule:
+	cd /home/pi/Car/build && $(MAKE) -f CMakeFiles/Makefile2 node_client/CMakeFiles/node_client_gencpp.dir/rule
+.PHONY : node_client/CMakeFiles/node_client_gencpp.dir/rule
+
+# Convenience name for target.
+node_client_gencpp: node_client/CMakeFiles/node_client_gencpp.dir/rule
+
+.PHONY : node_client_gencpp
+
+# fast build rule for target.
+node_client_gencpp/fast:
+	cd /home/pi/Car/build && $(MAKE) -f node_client/CMakeFiles/node_client_gencpp.dir/build.make node_client/CMakeFiles/node_client_gencpp.dir/build
+.PHONY : node_client_gencpp/fast
+
+# Convenience name for target.
+node_client/CMakeFiles/node_client_generate_messages_lisp.dir/rule:
+	cd /home/pi/Car/build && $(MAKE) -f CMakeFiles/Makefile2 node_client/CMakeFiles/node_client_generate_messages_lisp.dir/rule
+.PHONY : node_client/CMakeFiles/node_client_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+node_client_generate_messages_lisp: node_client/CMakeFiles/node_client_generate_messages_lisp.dir/rule
+
+.PHONY : node_client_generate_messages_lisp
+
+# fast build rule for target.
+node_client_generate_messages_lisp/fast:
+	cd /home/pi/Car/build && $(MAKE) -f node_client/CMakeFiles/node_client_generate_messages_lisp.dir/build.make node_client/CMakeFiles/node_client_generate_messages_lisp.dir/build
+.PHONY : node_client_generate_messages_lisp/fast
+
+# Convenience name for target.
+node_client/CMakeFiles/node_client_genpy.dir/rule:
+	cd /home/pi/Car/build && $(MAKE) -f CMakeFiles/Makefile2 node_client/CMakeFiles/node_client_genpy.dir/rule
+.PHONY : node_client/CMakeFiles/node_client_genpy.dir/rule
+
+# Convenience name for target.
+node_client_genpy: node_client/CMakeFiles/node_client_genpy.dir/rule
+
+.PHONY : node_client_genpy
+
+# fast build rule for target.
+node_client_genpy/fast:
+	cd /home/pi/Car/build && $(MAKE) -f node_client/CMakeFiles/node_client_genpy.dir/build.make node_client/CMakeFiles/node_client_genpy.dir/build
+.PHONY : node_client_genpy/fast
+
+# Convenience name for target.
+node_client/CMakeFiles/_node_client_generate_messages_check_deps_client.dir/rule:
+	cd /home/pi/Car/build && $(MAKE) -f CMakeFiles/Makefile2 node_client/CMakeFiles/_node_client_generate_messages_check_deps_client.dir/rule
+.PHONY : node_client/CMakeFiles/_node_client_generate_messages_check_deps_client.dir/rule
+
+# Convenience name for target.
+_node_client_generate_messages_check_deps_client: node_client/CMakeFiles/_node_client_generate_messages_check_deps_client.dir/rule
+
+.PHONY : _node_client_generate_messages_check_deps_client
+
+# fast build rule for target.
+_node_client_generate_messages_check_deps_client/fast:
+	cd /home/pi/Car/build && $(MAKE) -f node_client/CMakeFiles/_node_client_generate_messages_check_deps_client.dir/build.make node_client/CMakeFiles/_node_client_generate_messages_check_deps_client.dir/build
+.PHONY : _node_client_generate_messages_check_deps_client/fast
+
+# Convenience name for target.
+node_client/CMakeFiles/node_client_generate_messages_py.dir/rule:
+	cd /home/pi/Car/build && $(MAKE) -f CMakeFiles/Makefile2 node_client/CMakeFiles/node_client_generate_messages_py.dir/rule
+.PHONY : node_client/CMakeFiles/node_client_generate_messages_py.dir/rule
+
+# Convenience name for target.
+node_client_generate_messages_py: node_client/CMakeFiles/node_client_generate_messages_py.dir/rule
+
+.PHONY : node_client_generate_messages_py
+
+# fast build rule for target.
+node_client_generate_messages_py/fast:
+	cd /home/pi/Car/build && $(MAKE) -f node_client/CMakeFiles/node_client_generate_messages_py.dir/build.make node_client/CMakeFiles/node_client_generate_messages_py.dir/build
+.PHONY : node_client_generate_messages_py/fast
+
+# Convenience name for target.
+node_client/CMakeFiles/node_client.dir/rule:
+	cd /home/pi/Car/build && $(MAKE) -f CMakeFiles/Makefile2 node_client/CMakeFiles/node_client.dir/rule
+.PHONY : node_client/CMakeFiles/node_client.dir/rule
+
+# Convenience name for target.
+node_client: node_client/CMakeFiles/node_client.dir/rule
+
+.PHONY : node_client
+
+# fast build rule for target.
+node_client/fast:
+	cd /home/pi/Car/build && $(MAKE) -f node_client/CMakeFiles/node_client.dir/build.make node_client/CMakeFiles/node_client.dir/build
+.PHONY : node_client/fast
+
+__/basis/afx.o: __/basis/afx.cpp.o
+
+.PHONY : __/basis/afx.o
+
+# target to build an object file
+__/basis/afx.cpp.o:
+	cd /home/pi/Car/build && $(MAKE) -f node_client/CMakeFiles/node_client.dir/build.make node_client/CMakeFiles/node_client.dir/__/basis/afx.cpp.o
+.PHONY : __/basis/afx.cpp.o
+
+__/basis/afx.i: __/basis/afx.cpp.i
+
+.PHONY : __/basis/afx.i
+
+# target to preprocess a source file
+__/basis/afx.cpp.i:
+	cd /home/pi/Car/build && $(MAKE) -f node_client/CMakeFiles/node_client.dir/build.make node_client/CMakeFiles/node_client.dir/__/basis/afx.cpp.i
+.PHONY : __/basis/afx.cpp.i
+
+__/basis/afx.s: __/basis/afx.cpp.s
+
+.PHONY : __/basis/afx.s
+
+# target to generate assembly for a file
+__/basis/afx.cpp.s:
+	cd /home/pi/Car/build && $(MAKE) -f node_client/CMakeFiles/node_client.dir/build.make node_client/CMakeFiles/node_client.dir/__/basis/afx.cpp.s
+.PHONY : __/basis/afx.cpp.s
+
+__/basis/pkt.o: __/basis/pkt.cpp.o
+
+.PHONY : __/basis/pkt.o
+
+# target to build an object file
+__/basis/pkt.cpp.o:
+	cd /home/pi/Car/build && $(MAKE) -f node_client/CMakeFiles/node_client.dir/build.make node_client/CMakeFiles/node_client.dir/__/basis/pkt.cpp.o
+.PHONY : __/basis/pkt.cpp.o
+
+__/basis/pkt.i: __/basis/pkt.cpp.i
+
+.PHONY : __/basis/pkt.i
+
+# target to preprocess a source file
+__/basis/pkt.cpp.i:
+	cd /home/pi/Car/build && $(MAKE) -f node_client/CMakeFiles/node_client.dir/build.make node_client/CMakeFiles/node_client.dir/__/basis/pkt.cpp.i
+.PHONY : __/basis/pkt.cpp.i
+
+__/basis/pkt.s: __/basis/pkt.cpp.s
+
+.PHONY : __/basis/pkt.s
+
+# target to generate assembly for a file
+__/basis/pkt.cpp.s:
+	cd /home/pi/Car/build && $(MAKE) -f node_client/CMakeFiles/node_client.dir/build.make node_client/CMakeFiles/node_client.dir/__/basis/pkt.cpp.s
+.PHONY : __/basis/pkt.cpp.s
+
+__/basis/xchain.o: __/basis/xchain.cpp.o
+
+.PHONY : __/basis/xchain.o
+
+# target to build an object file
+__/basis/xchain.cpp.o:
+	cd /home/pi/Car/build && $(MAKE) -f node_client/CMakeFiles/node_client.dir/build.make node_client/CMakeFiles/node_client.dir/__/basis/xchain.cpp.o
+.PHONY : __/basis/xchain.cpp.o
+
+__/basis/xchain.i: __/basis/xchain.cpp.i
+
+.PHONY : __/basis/xchain.i
+
+# target to preprocess a source file
+__/basis/xchain.cpp.i:
+	cd /home/pi/Car/build && $(MAKE) -f node_client/CMakeFiles/node_client.dir/build.make node_client/CMakeFiles/node_client.dir/__/basis/xchain.cpp.i
+.PHONY : __/basis/xchain.cpp.i
+
+__/basis/xchain.s: __/basis/xchain.cpp.s
+
+.PHONY : __/basis/xchain.s
+
+# target to generate assembly for a file
+__/basis/xchain.cpp.s:
+	cd /home/pi/Car/build && $(MAKE) -f node_client/CMakeFiles/node_client.dir/build.make node_client/CMakeFiles/node_client.dir/__/basis/xchain.cpp.s
+.PHONY : __/basis/xchain.cpp.s
+
+__/basis/xlog.o: __/basis/xlog.cpp.o
+
+.PHONY : __/basis/xlog.o
+
+# target to build an object file
+__/basis/xlog.cpp.o:
+	cd /home/pi/Car/build && $(MAKE) -f node_client/CMakeFiles/node_client.dir/build.make node_client/CMakeFiles/node_client.dir/__/basis/xlog.cpp.o
+.PHONY : __/basis/xlog.cpp.o
+
+__/basis/xlog.i: __/basis/xlog.cpp.i
+
+.PHONY : __/basis/xlog.i
+
+# target to preprocess a source file
+__/basis/xlog.cpp.i:
+	cd /home/pi/Car/build && $(MAKE) -f node_client/CMakeFiles/node_client.dir/build.make node_client/CMakeFiles/node_client.dir/__/basis/xlog.cpp.i
+.PHONY : __/basis/xlog.cpp.i
+
+__/basis/xlog.s: __/basis/xlog.cpp.s
+
+.PHONY : __/basis/xlog.s
+
+# target to generate assembly for a file
+__/basis/xlog.cpp.s:
+	cd /home/pi/Car/build && $(MAKE) -f node_client/CMakeFiles/node_client.dir/build.make node_client/CMakeFiles/node_client.dir/__/basis/xlog.cpp.s
+.PHONY : __/basis/xlog.cpp.s
+
+__/basis/xtime.o: __/basis/xtime.cpp.o
+
+.PHONY : __/basis/xtime.o
+
+# target to build an object file
+__/basis/xtime.cpp.o:
+	cd /home/pi/Car/build && $(MAKE) -f node_client/CMakeFiles/node_client.dir/build.make node_client/CMakeFiles/node_client.dir/__/basis/xtime.cpp.o
+.PHONY : __/basis/xtime.cpp.o
+
+__/basis/xtime.i: __/basis/xtime.cpp.i
+
+.PHONY : __/basis/xtime.i
+
+# target to preprocess a source file
+__/basis/xtime.cpp.i:
+	cd /home/pi/Car/build && $(MAKE) -f node_client/CMakeFiles/node_client.dir/build.make node_client/CMakeFiles/node_client.dir/__/basis/xtime.cpp.i
+.PHONY : __/basis/xtime.cpp.i
+
+__/basis/xtime.s: __/basis/xtime.cpp.s
+
+.PHONY : __/basis/xtime.s
+
+# target to generate assembly for a file
+__/basis/xtime.cpp.s:
+	cd /home/pi/Car/build && $(MAKE) -f node_client/CMakeFiles/node_client.dir/build.make node_client/CMakeFiles/node_client.dir/__/basis/xtime.cpp.s
+.PHONY : __/basis/xtime.cpp.s
+
+src/client_socket.o: src/client_socket.cpp.o
+
+.PHONY : src/client_socket.o
+
+# target to build an object file
+src/client_socket.cpp.o:
+	cd /home/pi/Car/build && $(MAKE) -f node_client/CMakeFiles/node_client.dir/build.make node_client/CMakeFiles/node_client.dir/src/client_socket.cpp.o
+.PHONY : src/client_socket.cpp.o
+
+src/client_socket.i: src/client_socket.cpp.i
+
+.PHONY : src/client_socket.i
+
+# target to preprocess a source file
+src/client_socket.cpp.i:
+	cd /home/pi/Car/build && $(MAKE) -f node_client/CMakeFiles/node_client.dir/build.make node_client/CMakeFiles/node_client.dir/src/client_socket.cpp.i
+.PHONY : src/client_socket.cpp.i
+
+src/client_socket.s: src/client_socket.cpp.s
+
+.PHONY : src/client_socket.s
+
+# target to generate assembly for a file
+src/client_socket.cpp.s:
+	cd /home/pi/Car/build && $(MAKE) -f node_client/CMakeFiles/node_client.dir/build.make node_client/CMakeFiles/node_client.dir/src/client_socket.cpp.s
+.PHONY : src/client_socket.cpp.s
+
+src/node_client.o: src/node_client.cpp.o
+
+.PHONY : src/node_client.o
+
+# target to build an object file
+src/node_client.cpp.o:
+	cd /home/pi/Car/build && $(MAKE) -f node_client/CMakeFiles/node_client.dir/build.make node_client/CMakeFiles/node_client.dir/src/node_client.cpp.o
+.PHONY : src/node_client.cpp.o
+
+src/node_client.i: src/node_client.cpp.i
+
+.PHONY : src/node_client.i
+
+# target to preprocess a source file
+src/node_client.cpp.i:
+	cd /home/pi/Car/build && $(MAKE) -f node_client/CMakeFiles/node_client.dir/build.make node_client/CMakeFiles/node_client.dir/src/node_client.cpp.i
+.PHONY : src/node_client.cpp.i
+
+src/node_client.s: src/node_client.cpp.s
+
+.PHONY : src/node_client.s
+
+# target to generate assembly for a file
+src/node_client.cpp.s:
+	cd /home/pi/Car/build && $(MAKE) -f node_client/CMakeFiles/node_client.dir/build.make node_client/CMakeFiles/node_client.dir/src/node_client.cpp.s
+.PHONY : src/node_client.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... test"
 	@echo "... edit_cache"
-	@echo "... install/strip"
 	@echo "... rebuild_cache"
 	@echo "... list_install_components"
+	@echo "... install/strip"
 	@echo "... install"
+	@echo "... node_client_generate_messages"
+	@echo "... node_client_genlisp"
+	@echo "... node_client_generate_messages_cpp"
+	@echo "... node_client_gencpp"
+	@echo "... node_client_generate_messages_lisp"
+	@echo "... test"
+	@echo "... node_client_genpy"
+	@echo "... _node_client_generate_messages_check_deps_client"
+	@echo "... node_client_generate_messages_py"
+	@echo "... node_client"
 	@echo "... install/local"
+	@echo "... __/basis/afx.o"
+	@echo "... __/basis/afx.i"
+	@echo "... __/basis/afx.s"
+	@echo "... __/basis/pkt.o"
+	@echo "... __/basis/pkt.i"
+	@echo "... __/basis/pkt.s"
+	@echo "... __/basis/xchain.o"
+	@echo "... __/basis/xchain.i"
+	@echo "... __/basis/xchain.s"
+	@echo "... __/basis/xlog.o"
+	@echo "... __/basis/xlog.i"
+	@echo "... __/basis/xlog.s"
+	@echo "... __/basis/xtime.o"
+	@echo "... __/basis/xtime.i"
+	@echo "... __/basis/xtime.s"
+	@echo "... src/client_socket.o"
+	@echo "... src/client_socket.i"
+	@echo "... src/client_socket.s"
+	@echo "... src/node_client.o"
+	@echo "... src/node_client.i"
+	@echo "... src/node_client.s"
 .PHONY : help
 
 

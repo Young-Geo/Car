@@ -329,6 +329,12 @@ node_motion_BINARY_DIR:STATIC=/home/pi/Car/build/node_motion
 node_motion_SOURCE_DIR:STATIC=/home/pi/Car/src/node_motion
 
 //Value Computed by CMake
+node_test_BINARY_DIR:STATIC=/home/pi/Car/build/node_test
+
+//Value Computed by CMake
+node_test_SOURCE_DIR:STATIC=/home/pi/Car/src/node_test
+
+//Value Computed by CMake
 node_ultrasonic_BINARY_DIR:STATIC=/home/pi/Car/build/node_ultrasonic
 
 //Value Computed by CMake
@@ -460,7 +466,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=8
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=9
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

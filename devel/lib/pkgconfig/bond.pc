@@ -1,0 +1,8 @@
+prefix=/home/pi/Car/devel
+
+Name: bond
+Description: Description of bond
+Version: 1.8.1
+Cflags: -I/home/pi/Car/devel/include
+Libs: -L/home/pi/Car/devel/lib 
+Requires: message_runtime std_msgs

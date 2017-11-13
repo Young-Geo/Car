@@ -257,82 +257,17 @@ gtest/fast:
 .PHONY : gtest/fast
 
 #=============================================================================
-# Target rules for targets named roscpp_generate_messages_cpp
+# Target rules for targets named node_camera_generate_messages
 
 # Build rule for target.
-roscpp_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_cpp
-.PHONY : roscpp_generate_messages_cpp
+node_camera_generate_messages: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 node_camera_generate_messages
+.PHONY : node_camera_generate_messages
 
 # fast build rule for target.
-roscpp_generate_messages_cpp/fast:
-	$(MAKE) -f node_camera/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make node_camera/CMakeFiles/roscpp_generate_messages_cpp.dir/build
-.PHONY : roscpp_generate_messages_cpp/fast
-
-#=============================================================================
-# Target rules for targets named roscpp_generate_messages_py
-
-# Build rule for target.
-roscpp_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_py
-.PHONY : roscpp_generate_messages_py
-
-# fast build rule for target.
-roscpp_generate_messages_py/fast:
-	$(MAKE) -f node_camera/CMakeFiles/roscpp_generate_messages_py.dir/build.make node_camera/CMakeFiles/roscpp_generate_messages_py.dir/build
-.PHONY : roscpp_generate_messages_py/fast
-
-#=============================================================================
-# Target rules for targets named rosgraph_msgs_generate_messages_py
-
-# Build rule for target.
-rosgraph_msgs_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_py
-.PHONY : rosgraph_msgs_generate_messages_py
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_py/fast:
-	$(MAKE) -f node_camera/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make node_camera/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
-.PHONY : rosgraph_msgs_generate_messages_py/fast
-
-#=============================================================================
-# Target rules for targets named roscpp_generate_messages_lisp
-
-# Build rule for target.
-roscpp_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_lisp
-.PHONY : roscpp_generate_messages_lisp
-
-# fast build rule for target.
-roscpp_generate_messages_lisp/fast:
-	$(MAKE) -f node_camera/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make node_camera/CMakeFiles/roscpp_generate_messages_lisp.dir/build
-.PHONY : roscpp_generate_messages_lisp/fast
-
-#=============================================================================
-# Target rules for targets named rosgraph_msgs_generate_messages_cpp
-
-# Build rule for target.
-rosgraph_msgs_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_cpp
-.PHONY : rosgraph_msgs_generate_messages_cpp
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f node_camera/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make node_camera/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
-.PHONY : rosgraph_msgs_generate_messages_cpp/fast
-
-#=============================================================================
-# Target rules for targets named rosgraph_msgs_generate_messages_lisp
-
-# Build rule for target.
-rosgraph_msgs_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_lisp
-.PHONY : rosgraph_msgs_generate_messages_lisp
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f node_camera/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make node_camera/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
-.PHONY : rosgraph_msgs_generate_messages_lisp/fast
+node_camera_generate_messages/fast:
+	$(MAKE) -f node_camera/CMakeFiles/node_camera_generate_messages.dir/build.make node_camera/CMakeFiles/node_camera_generate_messages.dir/build
+.PHONY : node_camera_generate_messages/fast
 
 #=============================================================================
 # Target rules for targets named std_msgs_generate_messages_cpp
@@ -348,6 +283,32 @@ std_msgs_generate_messages_cpp/fast:
 .PHONY : std_msgs_generate_messages_cpp/fast
 
 #=============================================================================
+# Target rules for targets named node_camera_generate_messages_cpp
+
+# Build rule for target.
+node_camera_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 node_camera_generate_messages_cpp
+.PHONY : node_camera_generate_messages_cpp
+
+# fast build rule for target.
+node_camera_generate_messages_cpp/fast:
+	$(MAKE) -f node_camera/CMakeFiles/node_camera_generate_messages_cpp.dir/build.make node_camera/CMakeFiles/node_camera_generate_messages_cpp.dir/build
+.PHONY : node_camera_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named rosgraph_msgs_generate_messages_lisp
+
+# Build rule for target.
+rosgraph_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_lisp
+.PHONY : rosgraph_msgs_generate_messages_lisp
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f node_camera/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make node_camera/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
+.PHONY : rosgraph_msgs_generate_messages_lisp/fast
+
+#=============================================================================
 # Target rules for targets named std_msgs_generate_messages_lisp
 
 # Build rule for target.
@@ -361,6 +322,110 @@ std_msgs_generate_messages_lisp/fast:
 .PHONY : std_msgs_generate_messages_lisp/fast
 
 #=============================================================================
+# Target rules for targets named node_camera_generate_messages_lisp
+
+# Build rule for target.
+node_camera_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 node_camera_generate_messages_lisp
+.PHONY : node_camera_generate_messages_lisp
+
+# fast build rule for target.
+node_camera_generate_messages_lisp/fast:
+	$(MAKE) -f node_camera/CMakeFiles/node_camera_generate_messages_lisp.dir/build.make node_camera/CMakeFiles/node_camera_generate_messages_lisp.dir/build
+.PHONY : node_camera_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named node_camera_generate_messages_py
+
+# Build rule for target.
+node_camera_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 node_camera_generate_messages_py
+.PHONY : node_camera_generate_messages_py
+
+# fast build rule for target.
+node_camera_generate_messages_py/fast:
+	$(MAKE) -f node_camera/CMakeFiles/node_camera_generate_messages_py.dir/build.make node_camera/CMakeFiles/node_camera_generate_messages_py.dir/build
+.PHONY : node_camera_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named rosgraph_msgs_generate_messages_cpp
+
+# Build rule for target.
+rosgraph_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_cpp
+.PHONY : rosgraph_msgs_generate_messages_cpp
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f node_camera/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make node_camera/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
+.PHONY : rosgraph_msgs_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named roscpp_generate_messages_lisp
+
+# Build rule for target.
+roscpp_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_lisp
+.PHONY : roscpp_generate_messages_lisp
+
+# fast build rule for target.
+roscpp_generate_messages_lisp/fast:
+	$(MAKE) -f node_camera/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make node_camera/CMakeFiles/roscpp_generate_messages_lisp.dir/build
+.PHONY : roscpp_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named rosgraph_msgs_generate_messages_py
+
+# Build rule for target.
+rosgraph_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_py
+.PHONY : rosgraph_msgs_generate_messages_py
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_py/fast:
+	$(MAKE) -f node_camera/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make node_camera/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
+.PHONY : rosgraph_msgs_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named roscpp_generate_messages_py
+
+# Build rule for target.
+roscpp_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_py
+.PHONY : roscpp_generate_messages_py
+
+# fast build rule for target.
+roscpp_generate_messages_py/fast:
+	$(MAKE) -f node_camera/CMakeFiles/roscpp_generate_messages_py.dir/build.make node_camera/CMakeFiles/roscpp_generate_messages_py.dir/build
+.PHONY : roscpp_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named roscpp_generate_messages_cpp
+
+# Build rule for target.
+roscpp_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_cpp
+.PHONY : roscpp_generate_messages_cpp
+
+# fast build rule for target.
+roscpp_generate_messages_cpp/fast:
+	$(MAKE) -f node_camera/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make node_camera/CMakeFiles/roscpp_generate_messages_cpp.dir/build
+.PHONY : roscpp_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named node_camera_genlisp
+
+# Build rule for target.
+node_camera_genlisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 node_camera_genlisp
+.PHONY : node_camera_genlisp
+
+# fast build rule for target.
+node_camera_genlisp/fast:
+	$(MAKE) -f node_camera/CMakeFiles/node_camera_genlisp.dir/build.make node_camera/CMakeFiles/node_camera_genlisp.dir/build
+.PHONY : node_camera_genlisp/fast
+
+#=============================================================================
 # Target rules for targets named std_msgs_generate_messages_py
 
 # Build rule for target.
@@ -372,6 +437,305 @@ std_msgs_generate_messages_py: cmake_check_build_system
 std_msgs_generate_messages_py/fast:
 	$(MAKE) -f node_camera/CMakeFiles/std_msgs_generate_messages_py.dir/build.make node_camera/CMakeFiles/std_msgs_generate_messages_py.dir/build
 .PHONY : std_msgs_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named _node_camera_generate_messages_check_deps_camera
+
+# Build rule for target.
+_node_camera_generate_messages_check_deps_camera: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _node_camera_generate_messages_check_deps_camera
+.PHONY : _node_camera_generate_messages_check_deps_camera
+
+# fast build rule for target.
+_node_camera_generate_messages_check_deps_camera/fast:
+	$(MAKE) -f node_camera/CMakeFiles/_node_camera_generate_messages_check_deps_camera.dir/build.make node_camera/CMakeFiles/_node_camera_generate_messages_check_deps_camera.dir/build
+.PHONY : _node_camera_generate_messages_check_deps_camera/fast
+
+#=============================================================================
+# Target rules for targets named node_camera_gencpp
+
+# Build rule for target.
+node_camera_gencpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 node_camera_gencpp
+.PHONY : node_camera_gencpp
+
+# fast build rule for target.
+node_camera_gencpp/fast:
+	$(MAKE) -f node_camera/CMakeFiles/node_camera_gencpp.dir/build.make node_camera/CMakeFiles/node_camera_gencpp.dir/build
+.PHONY : node_camera_gencpp/fast
+
+#=============================================================================
+# Target rules for targets named node_camera_genpy
+
+# Build rule for target.
+node_camera_genpy: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 node_camera_genpy
+.PHONY : node_camera_genpy
+
+# fast build rule for target.
+node_camera_genpy/fast:
+	$(MAKE) -f node_camera/CMakeFiles/node_camera_genpy.dir/build.make node_camera/CMakeFiles/node_camera_genpy.dir/build
+.PHONY : node_camera_genpy/fast
+
+#=============================================================================
+# Target rules for targets named node_camera
+
+# Build rule for target.
+node_camera: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 node_camera
+.PHONY : node_camera
+
+# fast build rule for target.
+node_camera/fast:
+	$(MAKE) -f node_camera/CMakeFiles/node_camera.dir/build.make node_camera/CMakeFiles/node_camera.dir/build
+.PHONY : node_camera/fast
+
+#=============================================================================
+# Target rules for targets named node_client_generate_messages
+
+# Build rule for target.
+node_client_generate_messages: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 node_client_generate_messages
+.PHONY : node_client_generate_messages
+
+# fast build rule for target.
+node_client_generate_messages/fast:
+	$(MAKE) -f node_client/CMakeFiles/node_client_generate_messages.dir/build.make node_client/CMakeFiles/node_client_generate_messages.dir/build
+.PHONY : node_client_generate_messages/fast
+
+#=============================================================================
+# Target rules for targets named node_client_genlisp
+
+# Build rule for target.
+node_client_genlisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 node_client_genlisp
+.PHONY : node_client_genlisp
+
+# fast build rule for target.
+node_client_genlisp/fast:
+	$(MAKE) -f node_client/CMakeFiles/node_client_genlisp.dir/build.make node_client/CMakeFiles/node_client_genlisp.dir/build
+.PHONY : node_client_genlisp/fast
+
+#=============================================================================
+# Target rules for targets named node_client_generate_messages_cpp
+
+# Build rule for target.
+node_client_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 node_client_generate_messages_cpp
+.PHONY : node_client_generate_messages_cpp
+
+# fast build rule for target.
+node_client_generate_messages_cpp/fast:
+	$(MAKE) -f node_client/CMakeFiles/node_client_generate_messages_cpp.dir/build.make node_client/CMakeFiles/node_client_generate_messages_cpp.dir/build
+.PHONY : node_client_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named node_client_gencpp
+
+# Build rule for target.
+node_client_gencpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 node_client_gencpp
+.PHONY : node_client_gencpp
+
+# fast build rule for target.
+node_client_gencpp/fast:
+	$(MAKE) -f node_client/CMakeFiles/node_client_gencpp.dir/build.make node_client/CMakeFiles/node_client_gencpp.dir/build
+.PHONY : node_client_gencpp/fast
+
+#=============================================================================
+# Target rules for targets named node_client_generate_messages_lisp
+
+# Build rule for target.
+node_client_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 node_client_generate_messages_lisp
+.PHONY : node_client_generate_messages_lisp
+
+# fast build rule for target.
+node_client_generate_messages_lisp/fast:
+	$(MAKE) -f node_client/CMakeFiles/node_client_generate_messages_lisp.dir/build.make node_client/CMakeFiles/node_client_generate_messages_lisp.dir/build
+.PHONY : node_client_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named node_client_genpy
+
+# Build rule for target.
+node_client_genpy: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 node_client_genpy
+.PHONY : node_client_genpy
+
+# fast build rule for target.
+node_client_genpy/fast:
+	$(MAKE) -f node_client/CMakeFiles/node_client_genpy.dir/build.make node_client/CMakeFiles/node_client_genpy.dir/build
+.PHONY : node_client_genpy/fast
+
+#=============================================================================
+# Target rules for targets named _node_client_generate_messages_check_deps_client
+
+# Build rule for target.
+_node_client_generate_messages_check_deps_client: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _node_client_generate_messages_check_deps_client
+.PHONY : _node_client_generate_messages_check_deps_client
+
+# fast build rule for target.
+_node_client_generate_messages_check_deps_client/fast:
+	$(MAKE) -f node_client/CMakeFiles/_node_client_generate_messages_check_deps_client.dir/build.make node_client/CMakeFiles/_node_client_generate_messages_check_deps_client.dir/build
+.PHONY : _node_client_generate_messages_check_deps_client/fast
+
+#=============================================================================
+# Target rules for targets named node_client_generate_messages_py
+
+# Build rule for target.
+node_client_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 node_client_generate_messages_py
+.PHONY : node_client_generate_messages_py
+
+# fast build rule for target.
+node_client_generate_messages_py/fast:
+	$(MAKE) -f node_client/CMakeFiles/node_client_generate_messages_py.dir/build.make node_client/CMakeFiles/node_client_generate_messages_py.dir/build
+.PHONY : node_client_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named node_client
+
+# Build rule for target.
+node_client: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 node_client
+.PHONY : node_client
+
+# fast build rule for target.
+node_client/fast:
+	$(MAKE) -f node_client/CMakeFiles/node_client.dir/build.make node_client/CMakeFiles/node_client.dir/build
+.PHONY : node_client/fast
+
+#=============================================================================
+# Target rules for targets named node_decm
+
+# Build rule for target.
+node_decm: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 node_decm
+.PHONY : node_decm
+
+# fast build rule for target.
+node_decm/fast:
+	$(MAKE) -f node_decm/CMakeFiles/node_decm.dir/build.make node_decm/CMakeFiles/node_decm.dir/build
+.PHONY : node_decm/fast
+
+#=============================================================================
+# Target rules for targets named node_infrared_genlisp
+
+# Build rule for target.
+node_infrared_genlisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 node_infrared_genlisp
+.PHONY : node_infrared_genlisp
+
+# fast build rule for target.
+node_infrared_genlisp/fast:
+	$(MAKE) -f node_infrared/CMakeFiles/node_infrared_genlisp.dir/build.make node_infrared/CMakeFiles/node_infrared_genlisp.dir/build
+.PHONY : node_infrared_genlisp/fast
+
+#=============================================================================
+# Target rules for targets named node_infrared_genpy
+
+# Build rule for target.
+node_infrared_genpy: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 node_infrared_genpy
+.PHONY : node_infrared_genpy
+
+# fast build rule for target.
+node_infrared_genpy/fast:
+	$(MAKE) -f node_infrared/CMakeFiles/node_infrared_genpy.dir/build.make node_infrared/CMakeFiles/node_infrared_genpy.dir/build
+.PHONY : node_infrared_genpy/fast
+
+#=============================================================================
+# Target rules for targets named _node_infrared_generate_messages_check_deps_infr
+
+# Build rule for target.
+_node_infrared_generate_messages_check_deps_infr: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _node_infrared_generate_messages_check_deps_infr
+.PHONY : _node_infrared_generate_messages_check_deps_infr
+
+# fast build rule for target.
+_node_infrared_generate_messages_check_deps_infr/fast:
+	$(MAKE) -f node_infrared/CMakeFiles/_node_infrared_generate_messages_check_deps_infr.dir/build.make node_infrared/CMakeFiles/_node_infrared_generate_messages_check_deps_infr.dir/build
+.PHONY : _node_infrared_generate_messages_check_deps_infr/fast
+
+#=============================================================================
+# Target rules for targets named node_infrared_generate_messages_cpp
+
+# Build rule for target.
+node_infrared_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 node_infrared_generate_messages_cpp
+.PHONY : node_infrared_generate_messages_cpp
+
+# fast build rule for target.
+node_infrared_generate_messages_cpp/fast:
+	$(MAKE) -f node_infrared/CMakeFiles/node_infrared_generate_messages_cpp.dir/build.make node_infrared/CMakeFiles/node_infrared_generate_messages_cpp.dir/build
+.PHONY : node_infrared_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named node_infrared_generate_messages_py
+
+# Build rule for target.
+node_infrared_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 node_infrared_generate_messages_py
+.PHONY : node_infrared_generate_messages_py
+
+# fast build rule for target.
+node_infrared_generate_messages_py/fast:
+	$(MAKE) -f node_infrared/CMakeFiles/node_infrared_generate_messages_py.dir/build.make node_infrared/CMakeFiles/node_infrared_generate_messages_py.dir/build
+.PHONY : node_infrared_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named node_infrared_gencpp
+
+# Build rule for target.
+node_infrared_gencpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 node_infrared_gencpp
+.PHONY : node_infrared_gencpp
+
+# fast build rule for target.
+node_infrared_gencpp/fast:
+	$(MAKE) -f node_infrared/CMakeFiles/node_infrared_gencpp.dir/build.make node_infrared/CMakeFiles/node_infrared_gencpp.dir/build
+.PHONY : node_infrared_gencpp/fast
+
+#=============================================================================
+# Target rules for targets named node_infrared_generate_messages
+
+# Build rule for target.
+node_infrared_generate_messages: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 node_infrared_generate_messages
+.PHONY : node_infrared_generate_messages
+
+# fast build rule for target.
+node_infrared_generate_messages/fast:
+	$(MAKE) -f node_infrared/CMakeFiles/node_infrared_generate_messages.dir/build.make node_infrared/CMakeFiles/node_infrared_generate_messages.dir/build
+.PHONY : node_infrared_generate_messages/fast
+
+#=============================================================================
+# Target rules for targets named node_infrared
+
+# Build rule for target.
+node_infrared: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 node_infrared
+.PHONY : node_infrared
+
+# fast build rule for target.
+node_infrared/fast:
+	$(MAKE) -f node_infrared/CMakeFiles/node_infrared.dir/build.make node_infrared/CMakeFiles/node_infrared.dir/build
+.PHONY : node_infrared/fast
+
+#=============================================================================
+# Target rules for targets named node_infrared_generate_messages_lisp
+
+# Build rule for target.
+node_infrared_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 node_infrared_generate_messages_lisp
+.PHONY : node_infrared_generate_messages_lisp
+
+# fast build rule for target.
+node_infrared_generate_messages_lisp/fast:
+	$(MAKE) -f node_infrared/CMakeFiles/node_infrared_generate_messages_lisp.dir/build.make node_infrared/CMakeFiles/node_infrared_generate_messages_lisp.dir/build
+.PHONY : node_infrared_generate_messages_lisp/fast
 
 #=============================================================================
 # Target rules for targets named node_motion_generate_messages
@@ -489,6 +853,19 @@ node_motion_genpy: cmake_check_build_system
 node_motion_genpy/fast:
 	$(MAKE) -f node_motion/CMakeFiles/node_motion_genpy.dir/build.make node_motion/CMakeFiles/node_motion_genpy.dir/build
 .PHONY : node_motion_genpy/fast
+
+#=============================================================================
+# Target rules for targets named node_test
+
+# Build rule for target.
+node_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 node_test
+.PHONY : node_test
+
+# fast build rule for target.
+node_test/fast:
+	$(MAKE) -f node_test/CMakeFiles/node_test.dir/build.make node_test/CMakeFiles/node_test.dir/build
+.PHONY : node_test/fast
 
 #=============================================================================
 # Target rules for targets named node_ultrasonic_generate_messages_cpp
@@ -627,15 +1004,43 @@ help:
 	@echo "... install/strip"
 	@echo "... gtest_main"
 	@echo "... gtest"
-	@echo "... roscpp_generate_messages_cpp"
-	@echo "... roscpp_generate_messages_py"
-	@echo "... rosgraph_msgs_generate_messages_py"
-	@echo "... roscpp_generate_messages_lisp"
-	@echo "... rosgraph_msgs_generate_messages_cpp"
-	@echo "... rosgraph_msgs_generate_messages_lisp"
+	@echo "... node_camera_generate_messages"
 	@echo "... std_msgs_generate_messages_cpp"
+	@echo "... node_camera_generate_messages_cpp"
+	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... std_msgs_generate_messages_lisp"
+	@echo "... node_camera_generate_messages_lisp"
+	@echo "... node_camera_generate_messages_py"
+	@echo "... rosgraph_msgs_generate_messages_cpp"
+	@echo "... roscpp_generate_messages_lisp"
+	@echo "... rosgraph_msgs_generate_messages_py"
+	@echo "... roscpp_generate_messages_py"
+	@echo "... roscpp_generate_messages_cpp"
+	@echo "... node_camera_genlisp"
 	@echo "... std_msgs_generate_messages_py"
+	@echo "... _node_camera_generate_messages_check_deps_camera"
+	@echo "... node_camera_gencpp"
+	@echo "... node_camera_genpy"
+	@echo "... node_camera"
+	@echo "... node_client_generate_messages"
+	@echo "... node_client_genlisp"
+	@echo "... node_client_generate_messages_cpp"
+	@echo "... node_client_gencpp"
+	@echo "... node_client_generate_messages_lisp"
+	@echo "... node_client_genpy"
+	@echo "... _node_client_generate_messages_check_deps_client"
+	@echo "... node_client_generate_messages_py"
+	@echo "... node_client"
+	@echo "... node_decm"
+	@echo "... node_infrared_genlisp"
+	@echo "... node_infrared_genpy"
+	@echo "... _node_infrared_generate_messages_check_deps_infr"
+	@echo "... node_infrared_generate_messages_cpp"
+	@echo "... node_infrared_generate_messages_py"
+	@echo "... node_infrared_gencpp"
+	@echo "... node_infrared_generate_messages"
+	@echo "... node_infrared"
+	@echo "... node_infrared_generate_messages_lisp"
 	@echo "... node_motion_generate_messages"
 	@echo "... _node_motion_generate_messages_check_deps_motion"
 	@echo "... node_motion_generate_messages_cpp"
@@ -645,6 +1050,7 @@ help:
 	@echo "... node_motion_genlisp"
 	@echo "... node_motion_generate_messages_py"
 	@echo "... node_motion_genpy"
+	@echo "... node_test"
 	@echo "... node_ultrasonic_generate_messages_cpp"
 	@echo "... _node_ultrasonic_generate_messages_check_deps_ultr"
 	@echo "... node_ultrasonic_gencpp"

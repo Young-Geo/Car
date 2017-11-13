@@ -24,13 +24,15 @@ struct motion_
   typedef motion_<ContainerAllocator> Type;
 
   motion_()
-    : lf_forward(0)
+    : type(0)
+    , lf_forward(0)
     , ri_forward(0)
     , lf_back(0)
     , ri_back(0)  {
     }
   motion_(const ContainerAllocator& _alloc)
-    : lf_forward(0)
+    : type(0)
+    , lf_forward(0)
     , ri_forward(0)
     , lf_back(0)
     , ri_back(0)  {
@@ -38,6 +40,9 @@ struct motion_
     }
 
 
+
+   typedef uint16_t _type_type;
+  _type_type type;
 
    typedef int32_t _lf_forward_type;
   _lf_forward_type lf_forward;
@@ -128,12 +133,12 @@ struct MD5Sum< ::node_motion::motion_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "30faa4135c68a2443be6182d9fd899f7";
+    return "618d170492e3c869a2574b3b1e9242c4";
   }
 
   static const char* value(const ::node_motion::motion_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0x30faa4135c68a244ULL;
-  static const uint64_t static_value2 = 0x3be6182d9fd899f7ULL;
+  static const uint64_t static_value1 = 0x618d170492e3c869ULL;
+  static const uint64_t static_value2 = 0xa2574b3b1e9242c4ULL;
 };
 
 template<class ContainerAllocator>
@@ -152,7 +157,8 @@ struct Definition< ::node_motion::motion_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "int32 lf_forward\n\
+    return "uint16 type\n\
+int32 lf_forward\n\
 int32 ri_forward\n\
 int32 lf_back\n\
 int32 ri_back\n\
@@ -174,6 +180,7 @@ namespace serialization
   {
     template<typename Stream, typename T> inline static void allInOne(Stream& stream, T m)
     {
+      stream.next(m.type);
       stream.next(m.lf_forward);
       stream.next(m.ri_forward);
       stream.next(m.lf_back);
@@ -196,6 +203,8 @@ struct Printer< ::node_motion::motion_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::node_motion::motion_<ContainerAllocator>& v)
   {
+    s << indent << "type: ";
+    Printer<uint16_t>::stream(s, indent + "  ", v.type);
     s << indent << "lf_forward: ";
     Printer<int32_t>::stream(s, indent + "  ", v.lf_forward);
     s << indent << "ri_forward: ";

@@ -1,2 +1,2 @@
-node_camera:node_client:node_decm:node_infrared:node_motion:node_ultrasonic
+node_camera:node_client:node_decm:node_infrared:node_motion:node_test:node_ultrasonic
 -DCATKIN_DEVEL_PREFIX=/home/pi/Car/devel -DCMAKE_INSTALL_PREFIX=/home/pi/Car/install -G Unix Makefiles

@@ -7,16 +7,17 @@ import struct
 
 
 class motion(genpy.Message):
-  _md5sum = "30faa4135c68a2443be6182d9fd899f7"
+  _md5sum = "618d170492e3c869a2574b3b1e9242c4"
   _type = "node_motion/motion"
   _has_header = False #flag to mark the presence of a Header object
-  _full_text = """int32 lf_forward
+  _full_text = """uint16 type
+int32 lf_forward
 int32 ri_forward
 int32 lf_back
 int32 ri_back
 """
-  __slots__ = ['lf_forward','ri_forward','lf_back','ri_back']
-  _slot_types = ['int32','int32','int32','int32']
+  __slots__ = ['type','lf_forward','ri_forward','lf_back','ri_back']
+  _slot_types = ['uint16','int32','int32','int32','int32']
 
   def __init__(self, *args, **kwds):
     """
@@ -26,7 +27,7 @@ int32 ri_back
     changes.  You cannot mix in-order arguments and keyword arguments.
 
     The available fields are:
-       lf_forward,ri_forward,lf_back,ri_back
+       type,lf_forward,ri_forward,lf_back,ri_back
 
     :param args: complete set of field values, in .msg order
     :param kwds: use keyword arguments corresponding to message field names
@@ -35,6 +36,8 @@ int32 ri_back
     if args or kwds:
       super(motion, self).__init__(*args, **kwds)
       #message fields cannot be None, assign default values for those that are
+      if self.type is None:
+        self.type = 0
       if self.lf_forward is None:
         self.lf_forward = 0
       if self.ri_forward is None:
@@ -44,6 +47,7 @@ int32 ri_back
       if self.ri_back is None:
         self.ri_back = 0
     else:
+      self.type = 0
       self.lf_forward = 0
       self.ri_forward = 0
       self.lf_back = 0
@@ -62,7 +66,7 @@ int32 ri_back
     """
     try:
       _x = self
-      buff.write(_struct_4i.pack(_x.lf_forward, _x.ri_forward, _x.lf_back, _x.ri_back))
+      buff.write(_struct_H4i.pack(_x.type, _x.lf_forward, _x.ri_forward, _x.lf_back, _x.ri_back))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -75,8 +79,8 @@ int32 ri_back
       end = 0
       _x = self
       start = end
-      end += 16
-      (_x.lf_forward, _x.ri_forward, _x.lf_back, _x.ri_back,) = _struct_4i.unpack(str[start:end])
+      end += 18
+      (_x.type, _x.lf_forward, _x.ri_forward, _x.lf_back, _x.ri_back,) = _struct_H4i.unpack(str[start:end])
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e) #most likely buffer underfill
@@ -90,7 +94,7 @@ int32 ri_back
     """
     try:
       _x = self
-      buff.write(_struct_4i.pack(_x.lf_forward, _x.ri_forward, _x.lf_back, _x.ri_back))
+      buff.write(_struct_H4i.pack(_x.type, _x.lf_forward, _x.ri_forward, _x.lf_back, _x.ri_back))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -104,11 +108,11 @@ int32 ri_back
       end = 0
       _x = self
       start = end
-      end += 16
-      (_x.lf_forward, _x.ri_forward, _x.lf_back, _x.ri_back,) = _struct_4i.unpack(str[start:end])
+      end += 18
+      (_x.type, _x.lf_forward, _x.ri_forward, _x.lf_back, _x.ri_back,) = _struct_H4i.unpack(str[start:end])
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e) #most likely buffer underfill
 
 _struct_I = genpy.struct_I
-_struct_4i = struct.Struct("<4i")
+_struct_H4i = struct.Struct("<H4i")
