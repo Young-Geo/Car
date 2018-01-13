@@ -10,22 +10,7 @@
 #include "node_client/client_socket.h"
 
 #include "afx.h"
-
-#define COMMIP "192.168.0.104"
-#define COMMPORT 9001
-
-#define VIDEOIP COMMIP
-#define VIDEOPORT 9002
-
-enum _comm {
-	CONTROL_MODEL = 0x01,
-	AUTO_MODEL = 0x02,
-	COMM_LEFT = 0x03,
-	COMM_RIGHT = 0x04,
-	COMM_FORWARD = 0x05,
-	COMM_BACK = 0x06,
-	COMM_STOP = 0x07
-};
+#include "g_robot.h"
 
 
 static client_socket_t * scomm_socket = NULL;	
@@ -45,6 +30,7 @@ void		camera_call_back(const node_camera::camera::ConstPtr &camera)
 {
 	unsigned int size = 0, width = 0, height = 0;
 	unsigned char buf[Kbyte(100)] = { 0 };
+	static int inx = 0;
 	
 	ROS_INFO("node_client sub cameramess ...\n");
 
@@ -63,6 +49,25 @@ void		camera_call_back(const node_camera::camera::ConstPtr &camera)
 	xmemcpy(buf + sizeof(size), camera->data.c_str(), size);
 	if (svideo_socket)
 		client_socket_push(svideo_socket, buf, size + sizeof(size));
+#if 0
+	if (++inx <= 10) {
+		char file[128] = { 0 };
+		int fd = 0, retc = 0, ret = 0;
+		xsprintf(file, "/home/pi/Car/%d.jpg", inx);
+		fd = open(file, O_RDWR | O_CREAT | O_TRUNC, 0644);
+		if (fd > 0) {
+			while (retc < size)
+			{
+				ret = write(fd, buf + sizeof(size)+retc, size);
+				if (ret == -1) {
+					break;
+				}
+				retc += ret;
+			}
+			close(fd);
+		}
+	}
+#endif
 	return;
 }
 
@@ -93,7 +98,7 @@ int		comm_call_back(int fd, unsigned char *buf, int buf_size, void *arg)
 
 
 	//解析buf---
-	temp_parse_buf(buf, buf_size, data, sizeof(data));
+	temp_parse_buf(buf, buf_size, data, sizeof(data));//后续需要更改。。需要发
 
 	for (i = 0; i < buf_size; ++i)
 	{
@@ -185,7 +190,7 @@ int			main(int argc, const char **argv)
 	Client_pub_t pub;
 
 	pub_client = n.advertise<node_client::client>("clientmess", 1000);
-	pub_motion = n.advertise<node_motion::motion>("motiontype_mess", 1000);
+	pub_motion = n.advertise<node_motion::motion>("clientmotiontmess", 1000);
 	sub = n.subscribe("cameramess", 1000, camera_call_back);
 
 	xmemset(&pub, 0, sizeof(pub));

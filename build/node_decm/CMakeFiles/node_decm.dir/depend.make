@@ -4,6 +4,32 @@
 node_decm/CMakeFiles/node_decm.dir/__/basis/afx.cpp.o: /home/pi/Car/src/basis/afx.cpp
 node_decm/CMakeFiles/node_decm.dir/__/basis/afx.cpp.o: /home/pi/Car/src/basis/afx.h
 
+node_decm/CMakeFiles/node_decm.dir/__/basis/xchain.cpp.o: /home/pi/Car/src/basis/afx.h
+node_decm/CMakeFiles/node_decm.dir/__/basis/xchain.cpp.o: /home/pi/Car/src/basis/xchain.cpp
+node_decm/CMakeFiles/node_decm.dir/__/basis/xchain.cpp.o: /home/pi/Car/src/basis/xchain.h
+
+node_decm/CMakeFiles/node_decm.dir/__/basis/xlist.cpp.o: /home/pi/Car/src/basis/afx.h
+node_decm/CMakeFiles/node_decm.dir/__/basis/xlist.cpp.o: /home/pi/Car/src/basis/xchain.h
+node_decm/CMakeFiles/node_decm.dir/__/basis/xlist.cpp.o: /home/pi/Car/src/basis/xlist.cpp
+node_decm/CMakeFiles/node_decm.dir/__/basis/xlist.cpp.o: /home/pi/Car/src/basis/xlist.h
+
+node_decm/CMakeFiles/node_decm.dir/__/basis/xlog.cpp.o: /home/pi/Car/src/basis/afx.h
+node_decm/CMakeFiles/node_decm.dir/__/basis/xlog.cpp.o: /home/pi/Car/src/basis/xlog.cpp
+node_decm/CMakeFiles/node_decm.dir/__/basis/xlog.cpp.o: /home/pi/Car/src/basis/xlog.h
+node_decm/CMakeFiles/node_decm.dir/__/basis/xlog.cpp.o: /home/pi/Car/src/basis/xtime.h
+
+node_decm/CMakeFiles/node_decm.dir/__/basis/xtime.cpp.o: /home/pi/Car/src/basis/afx.h
+node_decm/CMakeFiles/node_decm.dir/__/basis/xtime.cpp.o: /home/pi/Car/src/basis/xtime.cpp
+node_decm/CMakeFiles/node_decm.dir/__/basis/xtime.cpp.o: /home/pi/Car/src/basis/xtime.h
+
+node_decm/CMakeFiles/node_decm.dir/src/model.cpp.o: /home/pi/Car/src/node_decm/../basis/afx.h
+node_decm/CMakeFiles/node_decm.dir/src/model.cpp.o: /home/pi/Car/src/node_decm/../basis/xchain.h
+node_decm/CMakeFiles/node_decm.dir/src/model.cpp.o: /home/pi/Car/src/node_decm/../basis/xlist.h
+node_decm/CMakeFiles/node_decm.dir/src/model.cpp.o: /home/pi/Car/src/node_decm/../basis/xlog.h
+node_decm/CMakeFiles/node_decm.dir/src/model.cpp.o: /home/pi/Car/src/node_decm/../basis/xtime.h
+node_decm/CMakeFiles/node_decm.dir/src/model.cpp.o: /home/pi/Car/src/node_decm/include/node_decm/model.h
+node_decm/CMakeFiles/node_decm.dir/src/model.cpp.o: /home/pi/Car/src/node_decm/src/model.cpp
+
 node_decm/CMakeFiles/node_decm.dir/src/node_decm.cpp.o: /home/pi/Car/devel/include/node_camera/camera.h
 node_decm/CMakeFiles/node_decm.dir/src/node_decm.cpp.o: /home/pi/Car/devel/include/node_client/client.h
 node_decm/CMakeFiles/node_decm.dir/src/node_decm.cpp.o: /home/pi/Car/devel/include/node_infrared/infr.h
@@ -12,6 +38,9 @@ node_decm/CMakeFiles/node_decm.dir/src/node_decm.cpp.o: /home/pi/Car/devel/inclu
 node_decm/CMakeFiles/node_decm.dir/src/node_decm.cpp.o: /home/pi/Car/src/node_decm/../basis/afx.h
 node_decm/CMakeFiles/node_decm.dir/src/node_decm.cpp.o: /home/pi/Car/src/node_decm/../basis/xchain.h
 node_decm/CMakeFiles/node_decm.dir/src/node_decm.cpp.o: /home/pi/Car/src/node_decm/../basis/xlist.h
+node_decm/CMakeFiles/node_decm.dir/src/node_decm.cpp.o: /home/pi/Car/src/node_decm/../basis/xlog.h
+node_decm/CMakeFiles/node_decm.dir/src/node_decm.cpp.o: /home/pi/Car/src/node_decm/../basis/xtime.h
+node_decm/CMakeFiles/node_decm.dir/src/node_decm.cpp.o: /home/pi/Car/src/node_decm/include/node_decm/model.h
 node_decm/CMakeFiles/node_decm.dir/src/node_decm.cpp.o: /home/pi/Car/src/node_decm/include/node_decm/robot.h
 node_decm/CMakeFiles/node_decm.dir/src/node_decm.cpp.o: /home/pi/Car/src/node_decm/src/node_decm.cpp
 node_decm/CMakeFiles/node_decm.dir/src/node_decm.cpp.o: /opt/ros/indigo/include/XmlRpcDecl.h
@@ -74,6 +103,9 @@ node_decm/CMakeFiles/node_decm.dir/src/node_decm.cpp.o: /opt/ros/indigo/include/
 node_decm/CMakeFiles/node_decm.dir/src/robot.cpp.o: /home/pi/Car/src/node_decm/../basis/afx.h
 node_decm/CMakeFiles/node_decm.dir/src/robot.cpp.o: /home/pi/Car/src/node_decm/../basis/xchain.h
 node_decm/CMakeFiles/node_decm.dir/src/robot.cpp.o: /home/pi/Car/src/node_decm/../basis/xlist.h
+node_decm/CMakeFiles/node_decm.dir/src/robot.cpp.o: /home/pi/Car/src/node_decm/../basis/xlog.h
+node_decm/CMakeFiles/node_decm.dir/src/robot.cpp.o: /home/pi/Car/src/node_decm/../basis/xtime.h
+node_decm/CMakeFiles/node_decm.dir/src/robot.cpp.o: /home/pi/Car/src/node_decm/include/node_decm/model.h
 node_decm/CMakeFiles/node_decm.dir/src/robot.cpp.o: /home/pi/Car/src/node_decm/include/node_decm/robot.h
 node_decm/CMakeFiles/node_decm.dir/src/robot.cpp.o: /home/pi/Car/src/node_decm/src/robot.cpp
 

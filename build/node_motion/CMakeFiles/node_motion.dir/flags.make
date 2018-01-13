@@ -6,5 +6,5 @@ CXX_FLAGS =
 
 CXX_DEFINES = -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\"node_motion\"
 
-CXX_INCLUDES = -I/home/pi/Car/devel/include -I/opt/ros/indigo/include 
+CXX_INCLUDES = -I/home/pi/Car/devel/include -I/home/pi/Car/src/node_motion/include -I/opt/ros/indigo/include -I/home/pi/Car/src/node_motion/../basis 
 

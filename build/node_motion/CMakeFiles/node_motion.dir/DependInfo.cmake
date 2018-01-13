@@ -18,7 +18,9 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/home/pi/Car/devel/include"
+  "/home/pi/Car/src/node_motion/include"
   "/opt/ros/indigo/include"
+  "/home/pi/Car/src/node_motion/../basis"
   )
 
 # Targets to which this target links.

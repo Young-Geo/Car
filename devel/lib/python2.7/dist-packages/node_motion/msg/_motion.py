@@ -7,17 +7,19 @@ import struct
 
 
 class motion(genpy.Message):
-  _md5sum = "618d170492e3c869a2574b3b1e9242c4"
+  _md5sum = "db7c515f060d48a572a63b0cceba60c8"
   _type = "node_motion/motion"
   _has_header = False #flag to mark the presence of a Header object
-  _full_text = """uint16 type
+  _full_text = """uint8 isadj_frame
+uint16 type
 int32 lf_forward
 int32 ri_forward
 int32 lf_back
 int32 ri_back
+uint64 time_stamp
 """
-  __slots__ = ['type','lf_forward','ri_forward','lf_back','ri_back']
-  _slot_types = ['uint16','int32','int32','int32','int32']
+  __slots__ = ['isadj_frame','type','lf_forward','ri_forward','lf_back','ri_back','time_stamp']
+  _slot_types = ['uint8','uint16','int32','int32','int32','int32','uint64']
 
   def __init__(self, *args, **kwds):
     """
@@ -27,7 +29,7 @@ int32 ri_back
     changes.  You cannot mix in-order arguments and keyword arguments.
 
     The available fields are:
-       type,lf_forward,ri_forward,lf_back,ri_back
+       isadj_frame,type,lf_forward,ri_forward,lf_back,ri_back,time_stamp
 
     :param args: complete set of field values, in .msg order
     :param kwds: use keyword arguments corresponding to message field names
@@ -36,6 +38,8 @@ int32 ri_back
     if args or kwds:
       super(motion, self).__init__(*args, **kwds)
       #message fields cannot be None, assign default values for those that are
+      if self.isadj_frame is None:
+        self.isadj_frame = 0
       if self.type is None:
         self.type = 0
       if self.lf_forward is None:
@@ -46,12 +50,16 @@ int32 ri_back
         self.lf_back = 0
       if self.ri_back is None:
         self.ri_back = 0
+      if self.time_stamp is None:
+        self.time_stamp = 0
     else:
+      self.isadj_frame = 0
       self.type = 0
       self.lf_forward = 0
       self.ri_forward = 0
       self.lf_back = 0
       self.ri_back = 0
+      self.time_stamp = 0
 
   def _get_types(self):
     """
@@ -66,7 +74,7 @@ int32 ri_back
     """
     try:
       _x = self
-      buff.write(_struct_H4i.pack(_x.type, _x.lf_forward, _x.ri_forward, _x.lf_back, _x.ri_back))
+      buff.write(_struct_BH4iQ.pack(_x.isadj_frame, _x.type, _x.lf_forward, _x.ri_forward, _x.lf_back, _x.ri_back, _x.time_stamp))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -79,8 +87,8 @@ int32 ri_back
       end = 0
       _x = self
       start = end
-      end += 18
-      (_x.type, _x.lf_forward, _x.ri_forward, _x.lf_back, _x.ri_back,) = _struct_H4i.unpack(str[start:end])
+      end += 27
+      (_x.isadj_frame, _x.type, _x.lf_forward, _x.ri_forward, _x.lf_back, _x.ri_back, _x.time_stamp,) = _struct_BH4iQ.unpack(str[start:end])
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e) #most likely buffer underfill
@@ -94,7 +102,7 @@ int32 ri_back
     """
     try:
       _x = self
-      buff.write(_struct_H4i.pack(_x.type, _x.lf_forward, _x.ri_forward, _x.lf_back, _x.ri_back))
+      buff.write(_struct_BH4iQ.pack(_x.isadj_frame, _x.type, _x.lf_forward, _x.ri_forward, _x.lf_back, _x.ri_back, _x.time_stamp))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -108,11 +116,11 @@ int32 ri_back
       end = 0
       _x = self
       start = end
-      end += 18
-      (_x.type, _x.lf_forward, _x.ri_forward, _x.lf_back, _x.ri_back,) = _struct_H4i.unpack(str[start:end])
+      end += 27
+      (_x.isadj_frame, _x.type, _x.lf_forward, _x.ri_forward, _x.lf_back, _x.ri_back, _x.time_stamp,) = _struct_BH4iQ.unpack(str[start:end])
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e) #most likely buffer underfill
 
 _struct_I = genpy.struct_I
-_struct_H4i = struct.Struct("<H4i")
+_struct_BH4iQ = struct.Struct("<BH4iQ")

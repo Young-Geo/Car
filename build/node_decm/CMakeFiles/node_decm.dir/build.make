@@ -105,9 +105,33 @@ node_decm/CMakeFiles/node_decm.dir/src/robot.cpp.o.provides: node_decm/CMakeFile
 node_decm/CMakeFiles/node_decm.dir/src/robot.cpp.o.provides.build: node_decm/CMakeFiles/node_decm.dir/src/robot.cpp.o
 
 
+node_decm/CMakeFiles/node_decm.dir/src/model.cpp.o: node_decm/CMakeFiles/node_decm.dir/flags.make
+node_decm/CMakeFiles/node_decm.dir/src/model.cpp.o: /home/pi/Car/src/node_decm/src/model.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/Car/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object node_decm/CMakeFiles/node_decm.dir/src/model.cpp.o"
+	cd /home/pi/Car/build/node_decm && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/node_decm.dir/src/model.cpp.o -c /home/pi/Car/src/node_decm/src/model.cpp
+
+node_decm/CMakeFiles/node_decm.dir/src/model.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/node_decm.dir/src/model.cpp.i"
+	cd /home/pi/Car/build/node_decm && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pi/Car/src/node_decm/src/model.cpp > CMakeFiles/node_decm.dir/src/model.cpp.i
+
+node_decm/CMakeFiles/node_decm.dir/src/model.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/node_decm.dir/src/model.cpp.s"
+	cd /home/pi/Car/build/node_decm && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pi/Car/src/node_decm/src/model.cpp -o CMakeFiles/node_decm.dir/src/model.cpp.s
+
+node_decm/CMakeFiles/node_decm.dir/src/model.cpp.o.requires:
+
+.PHONY : node_decm/CMakeFiles/node_decm.dir/src/model.cpp.o.requires
+
+node_decm/CMakeFiles/node_decm.dir/src/model.cpp.o.provides: node_decm/CMakeFiles/node_decm.dir/src/model.cpp.o.requires
+	$(MAKE) -f node_decm/CMakeFiles/node_decm.dir/build.make node_decm/CMakeFiles/node_decm.dir/src/model.cpp.o.provides.build
+.PHONY : node_decm/CMakeFiles/node_decm.dir/src/model.cpp.o.provides
+
+node_decm/CMakeFiles/node_decm.dir/src/model.cpp.o.provides.build: node_decm/CMakeFiles/node_decm.dir/src/model.cpp.o
+
+
 node_decm/CMakeFiles/node_decm.dir/__/basis/afx.cpp.o: node_decm/CMakeFiles/node_decm.dir/flags.make
 node_decm/CMakeFiles/node_decm.dir/__/basis/afx.cpp.o: /home/pi/Car/src/basis/afx.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/Car/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object node_decm/CMakeFiles/node_decm.dir/__/basis/afx.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/Car/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object node_decm/CMakeFiles/node_decm.dir/__/basis/afx.cpp.o"
 	cd /home/pi/Car/build/node_decm && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/node_decm.dir/__/basis/afx.cpp.o -c /home/pi/Car/src/basis/afx.cpp
 
 node_decm/CMakeFiles/node_decm.dir/__/basis/afx.cpp.i: cmake_force
@@ -129,18 +153,124 @@ node_decm/CMakeFiles/node_decm.dir/__/basis/afx.cpp.o.provides: node_decm/CMakeF
 node_decm/CMakeFiles/node_decm.dir/__/basis/afx.cpp.o.provides.build: node_decm/CMakeFiles/node_decm.dir/__/basis/afx.cpp.o
 
 
+node_decm/CMakeFiles/node_decm.dir/__/basis/xlist.cpp.o: node_decm/CMakeFiles/node_decm.dir/flags.make
+node_decm/CMakeFiles/node_decm.dir/__/basis/xlist.cpp.o: /home/pi/Car/src/basis/xlist.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/Car/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object node_decm/CMakeFiles/node_decm.dir/__/basis/xlist.cpp.o"
+	cd /home/pi/Car/build/node_decm && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/node_decm.dir/__/basis/xlist.cpp.o -c /home/pi/Car/src/basis/xlist.cpp
+
+node_decm/CMakeFiles/node_decm.dir/__/basis/xlist.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/node_decm.dir/__/basis/xlist.cpp.i"
+	cd /home/pi/Car/build/node_decm && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pi/Car/src/basis/xlist.cpp > CMakeFiles/node_decm.dir/__/basis/xlist.cpp.i
+
+node_decm/CMakeFiles/node_decm.dir/__/basis/xlist.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/node_decm.dir/__/basis/xlist.cpp.s"
+	cd /home/pi/Car/build/node_decm && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pi/Car/src/basis/xlist.cpp -o CMakeFiles/node_decm.dir/__/basis/xlist.cpp.s
+
+node_decm/CMakeFiles/node_decm.dir/__/basis/xlist.cpp.o.requires:
+
+.PHONY : node_decm/CMakeFiles/node_decm.dir/__/basis/xlist.cpp.o.requires
+
+node_decm/CMakeFiles/node_decm.dir/__/basis/xlist.cpp.o.provides: node_decm/CMakeFiles/node_decm.dir/__/basis/xlist.cpp.o.requires
+	$(MAKE) -f node_decm/CMakeFiles/node_decm.dir/build.make node_decm/CMakeFiles/node_decm.dir/__/basis/xlist.cpp.o.provides.build
+.PHONY : node_decm/CMakeFiles/node_decm.dir/__/basis/xlist.cpp.o.provides
+
+node_decm/CMakeFiles/node_decm.dir/__/basis/xlist.cpp.o.provides.build: node_decm/CMakeFiles/node_decm.dir/__/basis/xlist.cpp.o
+
+
+node_decm/CMakeFiles/node_decm.dir/__/basis/xchain.cpp.o: node_decm/CMakeFiles/node_decm.dir/flags.make
+node_decm/CMakeFiles/node_decm.dir/__/basis/xchain.cpp.o: /home/pi/Car/src/basis/xchain.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/Car/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object node_decm/CMakeFiles/node_decm.dir/__/basis/xchain.cpp.o"
+	cd /home/pi/Car/build/node_decm && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/node_decm.dir/__/basis/xchain.cpp.o -c /home/pi/Car/src/basis/xchain.cpp
+
+node_decm/CMakeFiles/node_decm.dir/__/basis/xchain.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/node_decm.dir/__/basis/xchain.cpp.i"
+	cd /home/pi/Car/build/node_decm && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pi/Car/src/basis/xchain.cpp > CMakeFiles/node_decm.dir/__/basis/xchain.cpp.i
+
+node_decm/CMakeFiles/node_decm.dir/__/basis/xchain.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/node_decm.dir/__/basis/xchain.cpp.s"
+	cd /home/pi/Car/build/node_decm && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pi/Car/src/basis/xchain.cpp -o CMakeFiles/node_decm.dir/__/basis/xchain.cpp.s
+
+node_decm/CMakeFiles/node_decm.dir/__/basis/xchain.cpp.o.requires:
+
+.PHONY : node_decm/CMakeFiles/node_decm.dir/__/basis/xchain.cpp.o.requires
+
+node_decm/CMakeFiles/node_decm.dir/__/basis/xchain.cpp.o.provides: node_decm/CMakeFiles/node_decm.dir/__/basis/xchain.cpp.o.requires
+	$(MAKE) -f node_decm/CMakeFiles/node_decm.dir/build.make node_decm/CMakeFiles/node_decm.dir/__/basis/xchain.cpp.o.provides.build
+.PHONY : node_decm/CMakeFiles/node_decm.dir/__/basis/xchain.cpp.o.provides
+
+node_decm/CMakeFiles/node_decm.dir/__/basis/xchain.cpp.o.provides.build: node_decm/CMakeFiles/node_decm.dir/__/basis/xchain.cpp.o
+
+
+node_decm/CMakeFiles/node_decm.dir/__/basis/xlog.cpp.o: node_decm/CMakeFiles/node_decm.dir/flags.make
+node_decm/CMakeFiles/node_decm.dir/__/basis/xlog.cpp.o: /home/pi/Car/src/basis/xlog.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/Car/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object node_decm/CMakeFiles/node_decm.dir/__/basis/xlog.cpp.o"
+	cd /home/pi/Car/build/node_decm && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/node_decm.dir/__/basis/xlog.cpp.o -c /home/pi/Car/src/basis/xlog.cpp
+
+node_decm/CMakeFiles/node_decm.dir/__/basis/xlog.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/node_decm.dir/__/basis/xlog.cpp.i"
+	cd /home/pi/Car/build/node_decm && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pi/Car/src/basis/xlog.cpp > CMakeFiles/node_decm.dir/__/basis/xlog.cpp.i
+
+node_decm/CMakeFiles/node_decm.dir/__/basis/xlog.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/node_decm.dir/__/basis/xlog.cpp.s"
+	cd /home/pi/Car/build/node_decm && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pi/Car/src/basis/xlog.cpp -o CMakeFiles/node_decm.dir/__/basis/xlog.cpp.s
+
+node_decm/CMakeFiles/node_decm.dir/__/basis/xlog.cpp.o.requires:
+
+.PHONY : node_decm/CMakeFiles/node_decm.dir/__/basis/xlog.cpp.o.requires
+
+node_decm/CMakeFiles/node_decm.dir/__/basis/xlog.cpp.o.provides: node_decm/CMakeFiles/node_decm.dir/__/basis/xlog.cpp.o.requires
+	$(MAKE) -f node_decm/CMakeFiles/node_decm.dir/build.make node_decm/CMakeFiles/node_decm.dir/__/basis/xlog.cpp.o.provides.build
+.PHONY : node_decm/CMakeFiles/node_decm.dir/__/basis/xlog.cpp.o.provides
+
+node_decm/CMakeFiles/node_decm.dir/__/basis/xlog.cpp.o.provides.build: node_decm/CMakeFiles/node_decm.dir/__/basis/xlog.cpp.o
+
+
+node_decm/CMakeFiles/node_decm.dir/__/basis/xtime.cpp.o: node_decm/CMakeFiles/node_decm.dir/flags.make
+node_decm/CMakeFiles/node_decm.dir/__/basis/xtime.cpp.o: /home/pi/Car/src/basis/xtime.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/Car/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object node_decm/CMakeFiles/node_decm.dir/__/basis/xtime.cpp.o"
+	cd /home/pi/Car/build/node_decm && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/node_decm.dir/__/basis/xtime.cpp.o -c /home/pi/Car/src/basis/xtime.cpp
+
+node_decm/CMakeFiles/node_decm.dir/__/basis/xtime.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/node_decm.dir/__/basis/xtime.cpp.i"
+	cd /home/pi/Car/build/node_decm && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pi/Car/src/basis/xtime.cpp > CMakeFiles/node_decm.dir/__/basis/xtime.cpp.i
+
+node_decm/CMakeFiles/node_decm.dir/__/basis/xtime.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/node_decm.dir/__/basis/xtime.cpp.s"
+	cd /home/pi/Car/build/node_decm && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pi/Car/src/basis/xtime.cpp -o CMakeFiles/node_decm.dir/__/basis/xtime.cpp.s
+
+node_decm/CMakeFiles/node_decm.dir/__/basis/xtime.cpp.o.requires:
+
+.PHONY : node_decm/CMakeFiles/node_decm.dir/__/basis/xtime.cpp.o.requires
+
+node_decm/CMakeFiles/node_decm.dir/__/basis/xtime.cpp.o.provides: node_decm/CMakeFiles/node_decm.dir/__/basis/xtime.cpp.o.requires
+	$(MAKE) -f node_decm/CMakeFiles/node_decm.dir/build.make node_decm/CMakeFiles/node_decm.dir/__/basis/xtime.cpp.o.provides.build
+.PHONY : node_decm/CMakeFiles/node_decm.dir/__/basis/xtime.cpp.o.provides
+
+node_decm/CMakeFiles/node_decm.dir/__/basis/xtime.cpp.o.provides.build: node_decm/CMakeFiles/node_decm.dir/__/basis/xtime.cpp.o
+
+
 # Object files for target node_decm
 node_decm_OBJECTS = \
 "CMakeFiles/node_decm.dir/src/node_decm.cpp.o" \
 "CMakeFiles/node_decm.dir/src/robot.cpp.o" \
-"CMakeFiles/node_decm.dir/__/basis/afx.cpp.o"
+"CMakeFiles/node_decm.dir/src/model.cpp.o" \
+"CMakeFiles/node_decm.dir/__/basis/afx.cpp.o" \
+"CMakeFiles/node_decm.dir/__/basis/xlist.cpp.o" \
+"CMakeFiles/node_decm.dir/__/basis/xchain.cpp.o" \
+"CMakeFiles/node_decm.dir/__/basis/xlog.cpp.o" \
+"CMakeFiles/node_decm.dir/__/basis/xtime.cpp.o"
 
 # External object files for target node_decm
 node_decm_EXTERNAL_OBJECTS =
 
 /home/pi/Car/devel/lib/node_decm/node_decm: node_decm/CMakeFiles/node_decm.dir/src/node_decm.cpp.o
 /home/pi/Car/devel/lib/node_decm/node_decm: node_decm/CMakeFiles/node_decm.dir/src/robot.cpp.o
+/home/pi/Car/devel/lib/node_decm/node_decm: node_decm/CMakeFiles/node_decm.dir/src/model.cpp.o
 /home/pi/Car/devel/lib/node_decm/node_decm: node_decm/CMakeFiles/node_decm.dir/__/basis/afx.cpp.o
+/home/pi/Car/devel/lib/node_decm/node_decm: node_decm/CMakeFiles/node_decm.dir/__/basis/xlist.cpp.o
+/home/pi/Car/devel/lib/node_decm/node_decm: node_decm/CMakeFiles/node_decm.dir/__/basis/xchain.cpp.o
+/home/pi/Car/devel/lib/node_decm/node_decm: node_decm/CMakeFiles/node_decm.dir/__/basis/xlog.cpp.o
+/home/pi/Car/devel/lib/node_decm/node_decm: node_decm/CMakeFiles/node_decm.dir/__/basis/xtime.cpp.o
 /home/pi/Car/devel/lib/node_decm/node_decm: node_decm/CMakeFiles/node_decm.dir/build.make
 /home/pi/Car/devel/lib/node_decm/node_decm: /opt/ros/indigo/lib/libroscpp.so
 /home/pi/Car/devel/lib/node_decm/node_decm: /usr/lib/arm-linux-gnueabihf/libboost_signals.so
@@ -162,7 +292,7 @@ node_decm_EXTERNAL_OBJECTS =
 /home/pi/Car/devel/lib/node_decm/node_decm: /usr/lib/arm-linux-gnueabihf/libpthread.so
 /home/pi/Car/devel/lib/node_decm/node_decm: /usr/lib/arm-linux-gnueabihf/libconsole_bridge.so
 /home/pi/Car/devel/lib/node_decm/node_decm: node_decm/CMakeFiles/node_decm.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pi/Car/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable /home/pi/Car/devel/lib/node_decm/node_decm"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pi/Car/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable /home/pi/Car/devel/lib/node_decm/node_decm"
 	cd /home/pi/Car/build/node_decm && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/node_decm.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -172,7 +302,12 @@ node_decm/CMakeFiles/node_decm.dir/build: /home/pi/Car/devel/lib/node_decm/node_
 
 node_decm/CMakeFiles/node_decm.dir/requires: node_decm/CMakeFiles/node_decm.dir/src/node_decm.cpp.o.requires
 node_decm/CMakeFiles/node_decm.dir/requires: node_decm/CMakeFiles/node_decm.dir/src/robot.cpp.o.requires
+node_decm/CMakeFiles/node_decm.dir/requires: node_decm/CMakeFiles/node_decm.dir/src/model.cpp.o.requires
 node_decm/CMakeFiles/node_decm.dir/requires: node_decm/CMakeFiles/node_decm.dir/__/basis/afx.cpp.o.requires
+node_decm/CMakeFiles/node_decm.dir/requires: node_decm/CMakeFiles/node_decm.dir/__/basis/xlist.cpp.o.requires
+node_decm/CMakeFiles/node_decm.dir/requires: node_decm/CMakeFiles/node_decm.dir/__/basis/xchain.cpp.o.requires
+node_decm/CMakeFiles/node_decm.dir/requires: node_decm/CMakeFiles/node_decm.dir/__/basis/xlog.cpp.o.requires
+node_decm/CMakeFiles/node_decm.dir/requires: node_decm/CMakeFiles/node_decm.dir/__/basis/xtime.cpp.o.requires
 
 .PHONY : node_decm/CMakeFiles/node_decm.dir/requires
 

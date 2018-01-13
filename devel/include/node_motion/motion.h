@@ -24,22 +24,29 @@ struct motion_
   typedef motion_<ContainerAllocator> Type;
 
   motion_()
-    : type(0)
+    : isadj_frame(0)
+    , type(0)
     , lf_forward(0)
     , ri_forward(0)
     , lf_back(0)
-    , ri_back(0)  {
+    , ri_back(0)
+    , time_stamp(0)  {
     }
   motion_(const ContainerAllocator& _alloc)
-    : type(0)
+    : isadj_frame(0)
+    , type(0)
     , lf_forward(0)
     , ri_forward(0)
     , lf_back(0)
-    , ri_back(0)  {
+    , ri_back(0)
+    , time_stamp(0)  {
   (void)_alloc;
     }
 
 
+
+   typedef uint8_t _isadj_frame_type;
+  _isadj_frame_type isadj_frame;
 
    typedef uint16_t _type_type;
   _type_type type;
@@ -55,6 +62,9 @@ struct motion_
 
    typedef int32_t _ri_back_type;
   _ri_back_type ri_back;
+
+   typedef uint64_t _time_stamp_type;
+  _time_stamp_type time_stamp;
 
 
 
@@ -133,12 +143,12 @@ struct MD5Sum< ::node_motion::motion_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "618d170492e3c869a2574b3b1e9242c4";
+    return "db7c515f060d48a572a63b0cceba60c8";
   }
 
   static const char* value(const ::node_motion::motion_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0x618d170492e3c869ULL;
-  static const uint64_t static_value2 = 0xa2574b3b1e9242c4ULL;
+  static const uint64_t static_value1 = 0xdb7c515f060d48a5ULL;
+  static const uint64_t static_value2 = 0x72a63b0cceba60c8ULL;
 };
 
 template<class ContainerAllocator>
@@ -157,11 +167,13 @@ struct Definition< ::node_motion::motion_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "uint16 type\n\
+    return "uint8 isadj_frame\n\
+uint16 type\n\
 int32 lf_forward\n\
 int32 ri_forward\n\
 int32 lf_back\n\
 int32 ri_back\n\
+uint64 time_stamp\n\
 ";
   }
 
@@ -180,11 +192,13 @@ namespace serialization
   {
     template<typename Stream, typename T> inline static void allInOne(Stream& stream, T m)
     {
+      stream.next(m.isadj_frame);
       stream.next(m.type);
       stream.next(m.lf_forward);
       stream.next(m.ri_forward);
       stream.next(m.lf_back);
       stream.next(m.ri_back);
+      stream.next(m.time_stamp);
     }
 
     ROS_DECLARE_ALLINONE_SERIALIZER
@@ -203,6 +217,8 @@ struct Printer< ::node_motion::motion_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::node_motion::motion_<ContainerAllocator>& v)
   {
+    s << indent << "isadj_frame: ";
+    Printer<uint8_t>::stream(s, indent + "  ", v.isadj_frame);
     s << indent << "type: ";
     Printer<uint16_t>::stream(s, indent + "  ", v.type);
     s << indent << "lf_forward: ";
@@ -213,6 +229,8 @@ struct Printer< ::node_motion::motion_<ContainerAllocator> >
     Printer<int32_t>::stream(s, indent + "  ", v.lf_back);
     s << indent << "ri_back: ";
     Printer<int32_t>::stream(s, indent + "  ", v.ri_back);
+    s << indent << "time_stamp: ";
+    Printer<uint64_t>::stream(s, indent + "  ", v.time_stamp);
   }
 };
 

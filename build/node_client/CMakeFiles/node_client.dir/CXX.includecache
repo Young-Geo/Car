@@ -152,6 +152,8 @@ signal.h
 stdint.h
 -
 
+/home/pi/Car/src/node_client/../basis/g_robot.h
+
 /home/pi/Car/src/node_client/../basis/pkt.h
 afx.h
 /home/pi/Car/src/node_client/../basis/afx.h
@@ -233,6 +235,8 @@ node_client/client_socket.h
 /home/pi/Car/src/node_client/src/node_client/client_socket.h
 afx.h
 /home/pi/Car/src/node_client/src/afx.h
+g_robot.h
+/home/pi/Car/src/node_client/src/g_robot.h
 
 /opt/ros/indigo/include/XmlRpcDecl.h
 ros/macros.h

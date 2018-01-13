@@ -100,7 +100,7 @@ void safefree(void ** ptr) ;
 #define xcalloc(count, size) calloc((count), (size))
 #define null NULL
 ////////////////////////////////////////////////////////////////////////////
-#define xzero(buf, count) memset((buf), 0, (count))
+#define xzero(buf, count) memset((buf), ZERO, (count))
 #define xmemset(buf, v, count) memset((buf), (v), (count))
 ////////////////////////////////////////////////////////////////////////////
 float stov ( char * s ) ;

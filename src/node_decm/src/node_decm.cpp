@@ -17,6 +17,9 @@
 #include "node_decm/robot.h"
 #include "afx.h"
 
+static xlist *g_data = NULL;
+
+//后续需要加很多东西，例如各种硬件数据包的各种解析和数据处理
 void	ultr_call_back(const node_ultrasonic::ultr::ConstPtr &ultrdis)
 {
 	ROS_INFO("ultr_call_back ultrdis = %f\n", ultrdis->distance);
@@ -149,7 +152,6 @@ int listen_transform_wheel_right_back()
 
 int		main(int argc, const char **argv)
 {
-
 	ros::init(argc, (char **)argv, "node_decm");	
 
 	ros::NodeHandle n;
@@ -160,9 +162,10 @@ int		main(int argc, const char **argv)
 	ros::Subscriber subclient;
 	ros::Subscriber subcamera;
 	
-	robot_t robot;
+	robot_t *robot = NULL;
 	
-	xassert(!robot_init(&robot));
+	xassert((robot = robot_malloc()));
+	xassert((g_data = xlist_init()));
 
 	pubmotion = n.advertise<node_motion::motion>("motionmess", 1000);
 	subultr = n.subscribe("ultrmess", 1000, ultr_call_back);
@@ -174,11 +177,16 @@ int		main(int argc, const char **argv)
 	while (ros::ok())
 	{
 		ROS_INFO("node_decm ...\n");
+		
 #ifdef USE_TF
 		broadcast_baselink();
 #endif
+		
 		ros::spinOnce();
+		robot_loopOnce(robot, g_data);
 		r.sleep();
 	}
+
+	robot_exit(robot);
 	return 0;
 }

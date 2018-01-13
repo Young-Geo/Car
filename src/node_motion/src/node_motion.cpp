@@ -15,6 +15,9 @@
 #endif
 #include "node_motion/motion.h"
 
+#include "g_robot.h"
+
+
 #define PINONE 1
 #define PINTWO 4
 #define PINTHREE 5
@@ -28,21 +31,25 @@
 #define MOTOR_GO_LEFT      digitalWrite(4,HIGH);digitalWrite(1,LOW);digitalWrite(5,HIGH);digitalWrite(6,LOW)
 #define MOTOR_GO_STOP      digitalWrite(1, LOW);digitalWrite(4,LOW);digitalWrite(5, LOW);digitalWrite(6,LOW)
 
-enum _comm {
-	CONTROL_MODEL = 0x01,
-	AUTO_MODEL = 0x02,
-	COMM_LEFT = 0x03,
-	COMM_RIGHT = 0x04,
-	COMM_FORWARD = 0x05,
-	COMM_BACK = 0x06,
-	COMM_STOP = 0x07
-};
+
+static int isdanger = 0;
 
 
 
 void        motion_call_back(const node_motion::motion::ConstPtr & motionmsg)
 {
-    // if
+	if (DANGER == motionmsg->type) {//后边应该加上新的东西允许出现危险紧急停止信息，之后发来调整信息 允许其调整小车的位姿
+		MOTOR_GO_STOP;
+		isdanger = 1;
+		return;
+	}
+
+	if (SAFE == motionmsg->type) {
+		MOTOR_GO_STOP;
+		isdanger = 0;
+		return;
+	}
+	
     ROS_INFO("LF_FORWARD PWM = %d\n", motionmsg->lf_forward);
     ROS_INFO("RI_FORWARD PWM = %d\n", motionmsg->ri_forward);
     ROS_INFO("LF_BACK PWM = %d\n", motionmsg->lf_back);
@@ -60,7 +67,15 @@ void        type_call_back(const node_motion::motion::ConstPtr & tpemsg)
 {
 	//motion_type BACK
 	unsigned short type = 0;
+	
 	type = tpemsg->type;
+	
+	
+	if (1 == isdanger && 1 != tpemsg->isadj_frame) {//有危险的时候可以允许手动调整的数据通过
+		//MOTOR_GO_STOP;//可以给Client 上报数据
+		return;
+	}
+	
 	switch (type)
 	{
 		case COMM_LEFT:
@@ -177,7 +192,7 @@ int         main(int argc, const char **argv)
 	ros::Rate r(100);
 
 	sub_motion = n.subscribe("motionmess", 1000, motion_call_back);	
-	sub_type = n.subscribe("motiontype_mess", 1000, type_call_back);
+	sub_type = n.subscribe("clientmotiontmess", 1000, type_call_back);
 
 	while (ros::ok())
 	{

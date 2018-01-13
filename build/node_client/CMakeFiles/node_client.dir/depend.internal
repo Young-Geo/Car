@@ -36,6 +36,7 @@ node_client/CMakeFiles/node_client.dir/src/node_client.cpp.o
  /home/pi/Car/devel/include/node_client/client.h
  /home/pi/Car/devel/include/node_motion/motion.h
  /home/pi/Car/src/node_client/../basis/afx.h
+ /home/pi/Car/src/node_client/../basis/g_robot.h
  /home/pi/Car/src/node_client/../basis/pkt.h
  /home/pi/Car/src/node_client/../basis/xchain.h
  /home/pi/Car/src/node_client/../basis/xlog.h

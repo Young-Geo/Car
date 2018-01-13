@@ -141,6 +141,8 @@ sys/ioctl.h
 -
 linux/videodev2.h
 -
+jpeglib.h
+-
 afx.h
 /home/pi/Car/src/node_camera/include/node_camera/afx.h
 xlog.h

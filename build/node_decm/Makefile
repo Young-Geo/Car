@@ -207,6 +207,141 @@ __/basis/afx.cpp.s:
 	cd /home/pi/Car/build && $(MAKE) -f node_decm/CMakeFiles/node_decm.dir/build.make node_decm/CMakeFiles/node_decm.dir/__/basis/afx.cpp.s
 .PHONY : __/basis/afx.cpp.s
 
+__/basis/xchain.o: __/basis/xchain.cpp.o
+
+.PHONY : __/basis/xchain.o
+
+# target to build an object file
+__/basis/xchain.cpp.o:
+	cd /home/pi/Car/build && $(MAKE) -f node_decm/CMakeFiles/node_decm.dir/build.make node_decm/CMakeFiles/node_decm.dir/__/basis/xchain.cpp.o
+.PHONY : __/basis/xchain.cpp.o
+
+__/basis/xchain.i: __/basis/xchain.cpp.i
+
+.PHONY : __/basis/xchain.i
+
+# target to preprocess a source file
+__/basis/xchain.cpp.i:
+	cd /home/pi/Car/build && $(MAKE) -f node_decm/CMakeFiles/node_decm.dir/build.make node_decm/CMakeFiles/node_decm.dir/__/basis/xchain.cpp.i
+.PHONY : __/basis/xchain.cpp.i
+
+__/basis/xchain.s: __/basis/xchain.cpp.s
+
+.PHONY : __/basis/xchain.s
+
+# target to generate assembly for a file
+__/basis/xchain.cpp.s:
+	cd /home/pi/Car/build && $(MAKE) -f node_decm/CMakeFiles/node_decm.dir/build.make node_decm/CMakeFiles/node_decm.dir/__/basis/xchain.cpp.s
+.PHONY : __/basis/xchain.cpp.s
+
+__/basis/xlist.o: __/basis/xlist.cpp.o
+
+.PHONY : __/basis/xlist.o
+
+# target to build an object file
+__/basis/xlist.cpp.o:
+	cd /home/pi/Car/build && $(MAKE) -f node_decm/CMakeFiles/node_decm.dir/build.make node_decm/CMakeFiles/node_decm.dir/__/basis/xlist.cpp.o
+.PHONY : __/basis/xlist.cpp.o
+
+__/basis/xlist.i: __/basis/xlist.cpp.i
+
+.PHONY : __/basis/xlist.i
+
+# target to preprocess a source file
+__/basis/xlist.cpp.i:
+	cd /home/pi/Car/build && $(MAKE) -f node_decm/CMakeFiles/node_decm.dir/build.make node_decm/CMakeFiles/node_decm.dir/__/basis/xlist.cpp.i
+.PHONY : __/basis/xlist.cpp.i
+
+__/basis/xlist.s: __/basis/xlist.cpp.s
+
+.PHONY : __/basis/xlist.s
+
+# target to generate assembly for a file
+__/basis/xlist.cpp.s:
+	cd /home/pi/Car/build && $(MAKE) -f node_decm/CMakeFiles/node_decm.dir/build.make node_decm/CMakeFiles/node_decm.dir/__/basis/xlist.cpp.s
+.PHONY : __/basis/xlist.cpp.s
+
+__/basis/xlog.o: __/basis/xlog.cpp.o
+
+.PHONY : __/basis/xlog.o
+
+# target to build an object file
+__/basis/xlog.cpp.o:
+	cd /home/pi/Car/build && $(MAKE) -f node_decm/CMakeFiles/node_decm.dir/build.make node_decm/CMakeFiles/node_decm.dir/__/basis/xlog.cpp.o
+.PHONY : __/basis/xlog.cpp.o
+
+__/basis/xlog.i: __/basis/xlog.cpp.i
+
+.PHONY : __/basis/xlog.i
+
+# target to preprocess a source file
+__/basis/xlog.cpp.i:
+	cd /home/pi/Car/build && $(MAKE) -f node_decm/CMakeFiles/node_decm.dir/build.make node_decm/CMakeFiles/node_decm.dir/__/basis/xlog.cpp.i
+.PHONY : __/basis/xlog.cpp.i
+
+__/basis/xlog.s: __/basis/xlog.cpp.s
+
+.PHONY : __/basis/xlog.s
+
+# target to generate assembly for a file
+__/basis/xlog.cpp.s:
+	cd /home/pi/Car/build && $(MAKE) -f node_decm/CMakeFiles/node_decm.dir/build.make node_decm/CMakeFiles/node_decm.dir/__/basis/xlog.cpp.s
+.PHONY : __/basis/xlog.cpp.s
+
+__/basis/xtime.o: __/basis/xtime.cpp.o
+
+.PHONY : __/basis/xtime.o
+
+# target to build an object file
+__/basis/xtime.cpp.o:
+	cd /home/pi/Car/build && $(MAKE) -f node_decm/CMakeFiles/node_decm.dir/build.make node_decm/CMakeFiles/node_decm.dir/__/basis/xtime.cpp.o
+.PHONY : __/basis/xtime.cpp.o
+
+__/basis/xtime.i: __/basis/xtime.cpp.i
+
+.PHONY : __/basis/xtime.i
+
+# target to preprocess a source file
+__/basis/xtime.cpp.i:
+	cd /home/pi/Car/build && $(MAKE) -f node_decm/CMakeFiles/node_decm.dir/build.make node_decm/CMakeFiles/node_decm.dir/__/basis/xtime.cpp.i
+.PHONY : __/basis/xtime.cpp.i
+
+__/basis/xtime.s: __/basis/xtime.cpp.s
+
+.PHONY : __/basis/xtime.s
+
+# target to generate assembly for a file
+__/basis/xtime.cpp.s:
+	cd /home/pi/Car/build && $(MAKE) -f node_decm/CMakeFiles/node_decm.dir/build.make node_decm/CMakeFiles/node_decm.dir/__/basis/xtime.cpp.s
+.PHONY : __/basis/xtime.cpp.s
+
+src/model.o: src/model.cpp.o
+
+.PHONY : src/model.o
+
+# target to build an object file
+src/model.cpp.o:
+	cd /home/pi/Car/build && $(MAKE) -f node_decm/CMakeFiles/node_decm.dir/build.make node_decm/CMakeFiles/node_decm.dir/src/model.cpp.o
+.PHONY : src/model.cpp.o
+
+src/model.i: src/model.cpp.i
+
+.PHONY : src/model.i
+
+# target to preprocess a source file
+src/model.cpp.i:
+	cd /home/pi/Car/build && $(MAKE) -f node_decm/CMakeFiles/node_decm.dir/build.make node_decm/CMakeFiles/node_decm.dir/src/model.cpp.i
+.PHONY : src/model.cpp.i
+
+src/model.s: src/model.cpp.s
+
+.PHONY : src/model.s
+
+# target to generate assembly for a file
+src/model.cpp.s:
+	cd /home/pi/Car/build && $(MAKE) -f node_decm/CMakeFiles/node_decm.dir/build.make node_decm/CMakeFiles/node_decm.dir/src/model.cpp.s
+.PHONY : src/model.cpp.s
+
 src/node_decm.o: src/node_decm.cpp.o
 
 .PHONY : src/node_decm.o
@@ -278,6 +413,21 @@ help:
 	@echo "... __/basis/afx.o"
 	@echo "... __/basis/afx.i"
 	@echo "... __/basis/afx.s"
+	@echo "... __/basis/xchain.o"
+	@echo "... __/basis/xchain.i"
+	@echo "... __/basis/xchain.s"
+	@echo "... __/basis/xlist.o"
+	@echo "... __/basis/xlist.i"
+	@echo "... __/basis/xlist.s"
+	@echo "... __/basis/xlog.o"
+	@echo "... __/basis/xlog.i"
+	@echo "... __/basis/xlog.s"
+	@echo "... __/basis/xtime.o"
+	@echo "... __/basis/xtime.i"
+	@echo "... __/basis/xtime.s"
+	@echo "... src/model.o"
+	@echo "... src/model.i"
+	@echo "... src/model.s"
 	@echo "... src/node_decm.o"
 	@echo "... src/node_decm.i"
 	@echo "... src/node_decm.s"

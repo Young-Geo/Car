@@ -200,3 +200,4 @@ include_directories(
 # catkin_add_nosetests(test)
 add_executable(node_camera src/node_camera.cpp src/v4l2.cpp ../basis/xlog.cpp ../basis/afx.cpp ../basis/xtime.cpp)
 target_link_libraries(node_camera ${catkin_LIBRARIES})
+target_link_libraries(node_camera jpeg)

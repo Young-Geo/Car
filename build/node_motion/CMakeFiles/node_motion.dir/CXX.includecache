@@ -22,6 +22,8 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
+/home/pi/Car/src/node_motion/../basis/g_robot.h
+
 /home/pi/Car/src/node_motion/src/node_motion.cpp
 stdio.h
 -
@@ -49,6 +51,8 @@ tf/transform_listener.h
 /home/pi/Car/src/node_motion/src/tf/transform_listener.h
 node_motion/motion.h
 /home/pi/Car/src/node_motion/src/node_motion/motion.h
+g_robot.h
+/home/pi/Car/src/node_motion/src/g_robot.h
 
 /opt/ros/indigo/include/XmlRpcDecl.h
 ros/macros.h

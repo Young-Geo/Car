@@ -3,45 +3,59 @@
 robot_t * 	robot_malloc()
 {
 	robot_t *robot = NULL;
-	robot = (robot_t *)xmalloc(sizeof(robot_t));
-	XXNULL(robot, NULL);
+	xassert((robot = (robot_t *)xcalloc(1, sizeof(robot_t))));
+	xassert((robot->data = xlist_init()));
+	xassert(robot->model = model_init());
 
-	
-	robot->distance = 0.0;
-	robot->left = robot->right = 0;
-
+	//////
+	///应该注册所有工作
+	//////
 	
 	return robot;
 }
 
 int		 	robot_init(robot_t *robot)
 {
-	XXNULL(robot, -1);
-
-	robot->distance = 0.0;
-	robot->left = robot->right = 0;
-
+	xassert(robot);
+	xzero(robot, sizeof(robot_t));
+	xassert((robot->data = xlist_init()));
+	xassert(robot->model = model_init());
+	
 	return 0;
 }
 
-int			robot_loop(robot_t *robot, void *arg)
+int			robot_loopOnce(robot_t *robot, void *data)
 {
-	XXNULL(robot, -1);
-	XXNULL(arg, -1);
+	xassert(robot);
 	
 	return 0;
 }
 
 int			robot_reinit(robot_t *robot)
-{
-	XXNULL(robot, -1);
-	
+{	
+	xassert(robot);
+	xassert(robot->data);
+	xassert(robot->model);
+
+	xlist_clean(&robot->data);
+	model_exit(robot->model);
+
+	xassert((robot->data = xlist_init()));
+	xassert(robot->model = model_init());
 	return 0;
 }
 
 int			robot_exit(robot_t *robot)
 {	
-	XXNULL(robot, -1);
+	xassert(robot);
+	xassert(robot->data);
+	xassert(robot->model);
+
+	xlist_clean(&robot->data);
+	model_exit(robot->model);
+
+	xfree(robot);
+	
 	return 0;
 }
 

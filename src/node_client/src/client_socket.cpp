@@ -112,7 +112,7 @@ int	client_socket_push(client_socket_t *csocket, unsigned char *buf, int buf_len
 
 	if ((data_len = (xchain_size(csocket->wchain) + buf_len)) > SOCKET_BUF_MAX) {
 		xmessage("chain too big clear\n");
-		xchain_delete(csocket->wchain, data_len - buf_len);
+		xchain_delete(csocket->wchain, xchain_size(csocket->wchain));
 	}
 	xchain_add(csocket->wchain, buf, buf_len);
 
@@ -214,8 +214,8 @@ int					client_socket_spinOnce_write(client_socket_t *csocket)
 	while (1)
 	{
 		ret = write(csocket->cfd, data + wcount, data_len - wcount);
-		xmessage("write spin: %d data_size %d\n", csocket->cfd, ret);
-		if (-1 == ret) {
+		xmessage("write spin: %d data_size %d errno %d\n", csocket->cfd, ret, errno);
+		if (-1 == ret && (EBADF == errno)) {
 			xmessage("write spin: close fd %d\n", csocket->cfd);
 			close(csocket->cfd);
 			csocket->cfd = -1;

@@ -195,7 +195,7 @@ include_directories(
 
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
-add_executable(node_decm src/node_decm.cpp src/robot.cpp ../basis/afx.cpp)
+add_executable(node_decm src/node_decm.cpp src/robot.cpp src/model.cpp ../basis/afx.cpp ../basis/xlist.cpp ../basis/xchain.cpp ../basis/xlog.cpp ../basis/xtime.cpp)
 target_link_libraries(node_decm ${catkin_LIBRARIES})
 add_dependencies(node_decm node_infrared)
 add_dependencies(node_decm ${catkin_EXPORTED_TARGETS})

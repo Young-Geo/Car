@@ -4,6 +4,32 @@
 node_decm/CMakeFiles/node_decm.dir/__/basis/afx.cpp.o
  /home/pi/Car/src/basis/afx.cpp
  /home/pi/Car/src/basis/afx.h
+node_decm/CMakeFiles/node_decm.dir/__/basis/xchain.cpp.o
+ /home/pi/Car/src/basis/afx.h
+ /home/pi/Car/src/basis/xchain.cpp
+ /home/pi/Car/src/basis/xchain.h
+node_decm/CMakeFiles/node_decm.dir/__/basis/xlist.cpp.o
+ /home/pi/Car/src/basis/afx.h
+ /home/pi/Car/src/basis/xchain.h
+ /home/pi/Car/src/basis/xlist.cpp
+ /home/pi/Car/src/basis/xlist.h
+node_decm/CMakeFiles/node_decm.dir/__/basis/xlog.cpp.o
+ /home/pi/Car/src/basis/afx.h
+ /home/pi/Car/src/basis/xlog.cpp
+ /home/pi/Car/src/basis/xlog.h
+ /home/pi/Car/src/basis/xtime.h
+node_decm/CMakeFiles/node_decm.dir/__/basis/xtime.cpp.o
+ /home/pi/Car/src/basis/afx.h
+ /home/pi/Car/src/basis/xtime.cpp
+ /home/pi/Car/src/basis/xtime.h
+node_decm/CMakeFiles/node_decm.dir/src/model.cpp.o
+ /home/pi/Car/src/node_decm/../basis/afx.h
+ /home/pi/Car/src/node_decm/../basis/xchain.h
+ /home/pi/Car/src/node_decm/../basis/xlist.h
+ /home/pi/Car/src/node_decm/../basis/xlog.h
+ /home/pi/Car/src/node_decm/../basis/xtime.h
+ /home/pi/Car/src/node_decm/include/node_decm/model.h
+ /home/pi/Car/src/node_decm/src/model.cpp
 node_decm/CMakeFiles/node_decm.dir/src/node_decm.cpp.o
  /home/pi/Car/devel/include/node_camera/camera.h
  /home/pi/Car/devel/include/node_client/client.h
@@ -13,6 +39,9 @@ node_decm/CMakeFiles/node_decm.dir/src/node_decm.cpp.o
  /home/pi/Car/src/node_decm/../basis/afx.h
  /home/pi/Car/src/node_decm/../basis/xchain.h
  /home/pi/Car/src/node_decm/../basis/xlist.h
+ /home/pi/Car/src/node_decm/../basis/xlog.h
+ /home/pi/Car/src/node_decm/../basis/xtime.h
+ /home/pi/Car/src/node_decm/include/node_decm/model.h
  /home/pi/Car/src/node_decm/include/node_decm/robot.h
  /home/pi/Car/src/node_decm/src/node_decm.cpp
  /opt/ros/indigo/include/XmlRpcDecl.h
@@ -75,5 +104,8 @@ node_decm/CMakeFiles/node_decm.dir/src/robot.cpp.o
  /home/pi/Car/src/node_decm/../basis/afx.h
  /home/pi/Car/src/node_decm/../basis/xchain.h
  /home/pi/Car/src/node_decm/../basis/xlist.h
+ /home/pi/Car/src/node_decm/../basis/xlog.h
+ /home/pi/Car/src/node_decm/../basis/xtime.h
+ /home/pi/Car/src/node_decm/include/node_decm/model.h
  /home/pi/Car/src/node_decm/include/node_decm/robot.h
  /home/pi/Car/src/node_decm/src/robot.cpp

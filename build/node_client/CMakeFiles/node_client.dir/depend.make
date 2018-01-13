@@ -35,6 +35,7 @@ node_client/CMakeFiles/node_client.dir/src/node_client.cpp.o: /home/pi/Car/devel
 node_client/CMakeFiles/node_client.dir/src/node_client.cpp.o: /home/pi/Car/devel/include/node_client/client.h
 node_client/CMakeFiles/node_client.dir/src/node_client.cpp.o: /home/pi/Car/devel/include/node_motion/motion.h
 node_client/CMakeFiles/node_client.dir/src/node_client.cpp.o: /home/pi/Car/src/node_client/../basis/afx.h
+node_client/CMakeFiles/node_client.dir/src/node_client.cpp.o: /home/pi/Car/src/node_client/../basis/g_robot.h
 node_client/CMakeFiles/node_client.dir/src/node_client.cpp.o: /home/pi/Car/src/node_client/../basis/pkt.h
 node_client/CMakeFiles/node_client.dir/src/node_client.cpp.o: /home/pi/Car/src/node_client/../basis/xchain.h
 node_client/CMakeFiles/node_client.dir/src/node_client.cpp.o: /home/pi/Car/src/node_client/../basis/xlog.h

@@ -12,7 +12,7 @@
 #include <sys/mman.h>
 #include <sys/ioctl.h>
 #include <linux/videodev2.h>
-
+#include <jpeglib.h>
 
 #include "afx.h"
 #include "xlog.h"
@@ -20,8 +20,8 @@
 #define DEVICE "/dev/video0"
 #define WIDTH 640
 #define HEIGHT 480
-#define FORMAT V4L2_PIX_FMT_MJPEG
-//#define FORMAT V4L2_PIX_FMT_YUYV
+//#define FORMAT V4L2_PIX_FMT_MJPEG
+#define FORMAT V4L2_PIX_FMT_YUYV
 
 
 
